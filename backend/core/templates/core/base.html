@@ -26,7 +26,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"TTT Audit","legalName":"{{ site|tr:"org_name"|escapejs }}","url":"{{ SITE_URL }}/","logo":"{{ SITE_URL }}{% if site.logo_mark %}{{ site.logo_mark.url }}{% else %}{% static 'core/img/logo-full.png' %}{% endif %}","telephone":["{{ site.phone|escapejs }}"{% if site.phone_second %},"{{ site.phone_second|escapejs }}"{% endif %}],"email":"{{ site.email|escapejs }}","taxID":"{{ site.tin|escapejs }}","foundingDate":"{{ site.founded_year }}","address":{"@type":"PostalAddress","streetAddress":"{{ site|tr:"address"|escapejs }}","addressLocality":"Fargʻona","addressCountry":"UZ"}{% if site.map_lat %},"geo":{"@type":"GeoCoordinates","latitude":{{ site.map_lat|stringformat:".5f" }},"longitude":{{ site.map_lng|stringformat:".5f" }}}{% endif %},"areaServed":{"@type":"Country","name":"Uzbekistan"},"knowsLanguage":["uz","ru","en"]}</script>
 {% block head %}{% endblock %}
 </head>
-<body>
+<body{% if design_preview %} data-design="{{ design_preview }}"{% endif %}>
 <a class="skip" href="#main">{% translate "Asosiy mazmunga oʻtish" %}</a>
 
 <div class="ubar"><div class="wrap">
@@ -64,6 +64,12 @@
 
 {% include "core/_crumbs.html" %}
 <main id="main">{% block main %}{% endblock %}</main>
+
+{% if design_preview %}<aside class="design-dock" aria-label="Dizayn variantlari">
+  <a class="design-dock__back" href="{% url 'core:designs' %}">← 6 dizayn</a>
+  <nav>{% for n in "123456" %}<a href="{% url 'core:home' %}?design={{ n }}"{% if design_preview == n %} aria-current="page"{% endif %}>{{ n }}</a>{% endfor %}</nav>
+  <span>Variant {{ design_preview }}</span>
+</aside>{% endif %}
 
 <footer class="ftr"><div class="wrap">
   <div class="ftr__grid">

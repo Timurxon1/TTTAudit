@@ -97,6 +97,8 @@ def hero_title(site):
 def home(request):
     site = SiteSettings.load()
     title_main, title_accent = hero_title(site)
+    design = request.GET.get("design", "")
+    design = design if design in {"1", "2", "3", "4", "5", "6"} else ""
     context = {
         "title_main": title_main,
         "title_accent": title_accent,
@@ -109,9 +111,15 @@ def home(request):
         "slides": list(Slide.objects.filter(is_active=True)),
         "posts": Post.objects.filter(is_published=True)[:3],
         "faq": [{"q": q, "a": a} for q, a in HOME_FAQ],
+        "design_preview": design,
     }
     context.update(compliance_context())
     return page(request, "core/home.html", **context)
+
+
+def designs(request):
+    """Mijoz uchun bosh sahifaning olti vizual yoʻnalishini tanlash ekrani."""
+    return page(request, "core/designs.html")
 
 
 def services(request):

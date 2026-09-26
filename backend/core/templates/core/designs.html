@@ -1,0 +1,17 @@
+{% extends "core/base.html" %}{% load i18n %}
+{% block title %}6 ta dizayn varianti — TTT Audit{% endblock %}
+{% block main %}
+<section class="designs-head"><div class="wrap">
+  <p class="designs-head__k">TTT Audit · dizayn tanlovi</p>
+  <h1>Sayt uchun 6 xil ko‘rinish</h1>
+  <p>Har bir variant qurilish auditi va energiya auditini asosiy yo‘nalish sifatida ko‘rsatadi. Kartani ochib, sahifani telefon va kompyuterda ko‘rib chiqing.</p>
+</div></section>
+<section class="designs-grid wrap" aria-label="Dizayn variantlari">
+  <article class="design-choice design-choice--1"><div class="design-choice__mock"><i></i><b></b><span></span><span></span></div><div class="design-choice__body"><span>01</span><h2>MyGov Classic</h2><p>Yumshoq binafsha-ko‘k ranglar, katta kartalar va qulay davlat portali uslubi.</p><a class="btn" href="{% url 'core:home' %}?design=1">Ko‘rib chiqish →</a></div></article>
+  <article class="design-choice design-choice--2"><div class="design-choice__mock"><i></i><b></b><span></span><span></span></div><div class="design-choice__body"><span>02</span><h2>Raqamli portal</h2><p>Ochiq osmonrang fon, ixcham navigatsiya va zamonaviy raqamli xizmat kayfiyati.</p><a class="btn" href="{% url 'core:home' %}?design=2">Ko‘rib chiqish →</a></div></article>
+  <article class="design-choice design-choice--3"><div class="design-choice__mock"><i></i><b></b><span></span><span></span></div><div class="design-choice__body"><span>03</span><h2>Yashil ekspertiza</h2><p>Energiya samaradorligi va ishonchni ifodalovchi yashil-ko‘k professional tizim.</p><a class="btn" href="{% url 'core:home' %}?design=3">Ko‘rib chiqish →</a></div></article>
+  <article class="design-choice design-choice--4"><div class="design-choice__mock"><i></i><b></b><span></span><span></span></div><div class="design-choice__body"><span>04</span><h2>Executive Navy</h2><p>To‘q ko‘k, oltin urg‘u va yirik obyektlar bilan ishlovchi ekspert tashkiloti obrazi.</p><a class="btn" href="{% url 'core:home' %}?design=4">Ko‘rib chiqish →</a></div></article>
+  <article class="design-choice design-choice--5"><div class="design-choice__mock"><i></i><b></b><span></span><span></span></div><div class="design-choice__body"><span>05</span><h2>Qurilish moduli</h2><p>Texnik chizmaga yaqin modular kompozitsiya va qurilishga mos to‘q sariq aksent.</p><a class="btn" href="{% url 'core:home' %}?design=5">Ko‘rib chiqish →</a></div></article>
+  <article class="design-choice design-choice--6"><div class="design-choice__mock"><i></i><b></b><span></span><span></span></div><div class="design-choice__body"><span>06</span><h2>Minimal davlat</h2><p>Jiddiy, juda toza, oq fonli va hujjatlarga urg‘u berilgan minimal ko‘rinish.</p><a class="btn" href="{% url 'core:home' %}?design=6">Ko‘rib chiqish →</a></div></article>
+</section>
+{% endblock %}

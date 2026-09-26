@@ -32,6 +32,24 @@ def test_home_ru_and_en_render(client):
 
 
 @pytest.mark.django_db
+def test_design_showcase_and_six_preview_modes(client):
+    showcase = client.get("/uz/dizaynlar/")
+    assert showcase.status_code == 200
+    html = showcase.content.decode()
+    assert "Sayt uchun 6 xil ko‘rinish" in html
+    assert html.count("?design=") == 6
+
+    for number in range(1, 7):
+        preview = client.get(f"/uz/?design={number}")
+        assert preview.status_code == 200
+        page = preview.content.decode()
+        assert f'<body data-design="{number}">' in page
+        assert f"Variant {number}" in page
+
+    assert "data-design" not in client.get("/uz/?design=wrong").content.decode()
+
+
+@pytest.mark.django_db
 def test_root_redirects_to_uz(client):
     response = client.get("/")
     assert response.status_code == 302
