@@ -7,7 +7,7 @@ COPY frontend/ ./
 RUN npm run build
 
 FROM python:3.14-slim
-ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 HOME=/home/app
 # Standart prod rejimi: settings.py dagi xavfsizlik bloki (HSTS, xavfsiz cookie,
 # CompressedManifestStaticFilesStorage) yoqiladi. `docker run -e DJANGO_DEBUG=...`
 # bilan qayta yozish mumkin, lekin buni hech qachon 1 ga qoʻymang (README: Prod: muhim).
