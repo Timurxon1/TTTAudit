@@ -29,7 +29,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="teammember",
             name="slug",
-            field=models.SlugField(max_length=140, null=True, blank=True),
+            # PostgreSQL'da SlugField vaqtincha db_index yaratadi; quyidagi
+            # unique SlugField ga o'tishda Django xuddi shu `_like` indeksini
+            # yana yaratib DuplicateTable bilan yiqiladi. Ma'lumot to'ldirish
+            # bosqichida indeks kerak emas, shuning uchun oddiy CharField.
+            field=models.CharField(max_length=140, null=True, blank=True),
         ),
         migrations.RunPython(fill_slugs, migrations.RunPython.noop),
         migrations.AlterField(
