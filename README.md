@@ -13,6 +13,7 @@ python manage.py migrate
 python manage.py seed_content        # tahririy kontent (yoʻnalish, xizmat, qonun, maqola)
 python manage.py import_tttaudit     # mijoz faktlari: hujjatlar, direktor + 38 mutaxassis, 46 sertifikat, 143 loyiha
 python manage.py sync_site_content   # admin uchun «Sayt matnlari» roʻyxati va standart slaydlar
+python manage.py sync_media          # yoʻq media fayllarni repository aktivlaridan tiklash
 python manage.py createsuperuser
 cd ../frontend && npm install && npm run build && cd ../backend
 python manage.py runserver

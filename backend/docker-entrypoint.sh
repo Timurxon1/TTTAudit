@@ -23,6 +23,9 @@ python manage.py createcachetable
 python manage.py seed_content
 python manage.py import_tttaudit
 python manage.py sync_site_content
+# PostgreSQL yozuvlari saqlanib, yangi container media papkasi bo'sh kelganda
+# repositorydagi nashr aktivlarini bazadagi mavjud yo'llar bo'yicha qayta tiklaydi.
+python manage.py sync_media
 
 # `exec` — gunicorn PID 1 boʻladi va SIGTERM'ni toʻgʻridan-toʻgʻri oladi
 exec gunicorn config.wsgi:application \
