@@ -50,10 +50,6 @@ msgstr "опыт, лет: %(n)s"
 msgid "%(total)s ta energoaudit va nazorat oʻlchovi ishi, 2019–2025: buyurtmachi, yoʻnalish, yil."
 msgstr "Реестр работ по энергоаудиту и контрольному обмеру (всего: %(total)s), 2019–2025: заказчик, направление, год."
 
-#: core/templates/core/home.html
-msgid "%(zru)s va VM qarori № 690; Energosamaradorlik milliy agentligi reestri, VM qarori № 673"
-msgstr "%(zru)s и Постановление КМ № 690; реестр Национального агентства по энергоэффективности, Постановление КМ № 673"
-
 #: core/home.py
 msgid "200 m² dan katta bino"
 msgstr "здания более 200 м²"
@@ -128,6 +124,10 @@ msgstr "Основание"
 #: core/models.py
 msgid "Asos (matndan)"
 msgstr "Основание (из текста)"
+
+#: core/templates/core/home.html
+msgid "Asosiy audit yoʻnalishlari"
+msgstr "Основные направления аудита"
 
 #: core/templates/core/home.html
 msgid "Asosiy faktlar"
@@ -375,17 +375,13 @@ msgstr "E-mail"
 msgid "Ekspert tashkiloti"
 msgstr "Экспертная организация"
 
+#: core/templates/core/home.html
+msgid "Ekspert tashkiloti · Fargʻona · 1997-yildan"
+msgstr "Экспертная организация · Фергана · с 1997 года"
+
 #: core/templates/core/base.html
 msgid "Ekspert tashkiloti, 1997-yildan"
 msgstr "Экспертная организация, с 1997 года"
-
-#: core/templates/core/home.html
-msgid "Ekspert xulosasi"
-msgstr "Экспертное заключение"
-
-#: core/templates/core/home.html
-msgid "Energetik pasport"
-msgstr "Энергетический паспорт"
 
 #: core/models.py
 msgid "Energetika va neft-gaz"
@@ -396,12 +392,8 @@ msgid "Energetika va qurilish yoʻnalishiga yaqin, taniqli tashkilotlar."
 msgstr "Известные организации, близкие к сфере энергетики и строительства."
 
 #: core/templates/core/home.html
-msgid "Energiya balansi"
-msgstr "Энергобаланс"
-
-#: core/templates/core/home.html
-msgid "Energiya isteʼmolini tekshirish va qurilishda bajarilgan ish hajmini oʻlchash. Ikkalasi ham davlat hujjati bilan tasdiqlangan vakolat asosida."
-msgstr "Проверка энергопотребления и обмер выполненных объёмов в строительстве. Оба направления — на основании полномочий, подтверждённых государственными документами."
+msgid "Energiya auditi"
+msgstr "Энергетический аудит"
 
 #: core/models.py
 msgid "Energiya toifasi"
@@ -595,6 +587,9 @@ msgid "Ijtimoiy tarmoq surati (OG)"
 msgstr "Изображение для соцсетей (OG)"
 
 #: core/templates/core/home.html
+msgid "Ikki audit yoʻnalishi"
+msgstr "Два направления аудита"
+
 #: core/templates/core/services.html
 msgid "Ikki yoʻnalish"
 msgstr "Два направления"
@@ -602,6 +597,10 @@ msgstr "Два направления"
 #: core/templates/core/services.html
 msgid "Ikki yoʻnalish: energiya isteʼmolini tekshirish va qurilishda bajarilgan ish hajmini oʻlchash. Ikkalasi ham davlat hujjati bilan tasdiqlangan vakolat asosida."
 msgstr "Два направления: проверка энергопотребления и измерение объёма выполненных строительных работ. Оба — на основании полномочий, подтверждённых государственным документом."
+
+#: core/templates/core/home.html
+msgid "Ikki yoʻnalishni ko‘rish"
+msgstr "Посмотреть оба направления"
 
 #: core/site_models.py
 msgid "Inglizcha"
@@ -759,6 +758,7 @@ msgstr "Квадратный PNG, не менее 88×88 px. Если пусто
 msgid "Lavozim"
 msgstr "Должность"
 
+#: core/templates/core/home.html
 #: core/templates/core/requisites.html
 #: core/models.py
 msgid "Litsenziya"
@@ -1004,10 +1004,6 @@ msgstr "В результате Вы получите"
 msgid "Nazorat oʻlchovi"
 msgstr "Контрольный обмер"
 
-#: core/templates/core/home.html
-msgid "Nazorat oʻlchovi dalolatnomasi"
-msgstr "Акт контрольного обмера"
-
 #: core/compliance.py
 msgid "Nazorat oʻlchovi tartibga solingan"
 msgstr "Контрольный обмер регламентирован"
@@ -1143,10 +1139,6 @@ msgstr "Где мы работали"
 msgid "Qaysi binolarga energosamaradorlik toifasi belgilanadi?"
 msgstr "Каким зданиям присваивается категория энергоэффективности?"
 
-#: core/templates/core/home.html
-msgid "Qaysi talab tegishli?"
-msgstr "Какое требование применимо?"
-
 #: core/templates/core/services.html
 msgid "Qaysi xizmat kerakligini bilmaysizmi? Obyekt haqida qisqacha yozing — muhandis qaysi talab tegishli ekanini birinchi suhbatda aytadi."
 msgstr "Не знаете, какая услуга нужна? Кратко расскажите об объекте — инженер скажет, какое требование применимо, уже при первом разговоре."
@@ -1195,10 +1187,6 @@ msgstr "Статья, основанная на законе, остаётся �
 msgid "Qonuniy asos"
 msgstr "Правовое основание"
 
-#: core/templates/core/home.html
-msgid "Qoʻlingizda"
-msgstr "На руках"
-
 #: core/models.py
 msgid "Qoʻshimcha telefon"
 msgstr "Дополнительный телефон"
@@ -1206,6 +1194,14 @@ msgstr "Дополнительный телефон"
 #: core/templates/core/home.html
 msgid "Qurilayotgan bino va minorali kran oldida shtativdagi geodezik asbob"
 msgstr "Геодезический прибор на штативе перед строящимся зданием и башенным краном"
+
+#: core/templates/core/home.html
+msgid "Qurilish auditi"
+msgstr "Строительный аудит"
+
+#: core/templates/core/home.html
+msgid "Qurilish auditi bajarilgan ishlar, hajm va smetani; energiya auditi esa obyektning energiya samaradorligini tekshiradi. Har ikki yoʻnalish o‘lchov va hujjatga tayangan ekspert xulosasi bilan yakunlanadi."
+msgstr "Строительный аудит проверяет выполненные работы, объёмы и смету; энергетический аудит — энергоэффективность объекта. Оба направления завершаются экспертным заключением на основе измерений и документов."
 
 #: core/templates/core/home.html
 msgid "Qurilish maydonida GNSS qabul qilgichli reyka bilan oʻlchayotgan mutaxassis"
@@ -1218,10 +1214,6 @@ msgstr "Строительство и водное хозяйство"
 #: core/templates/core/company.html
 msgid "Qurilish va uy-joy kommunal xoʻjaligi vazirligi bilan hamkorlik"
 msgstr "Сотрудничество с Министерством строительства и жилищно-коммунального хозяйства"
-
-#: core/templates/core/home.html
-msgid "Qurilish va uy-joy kommunal xoʻjaligi vazirligi litsenziyasi № 518159"
-msgstr "Лицензия Министерства строительства и жилищно-коммунального хозяйства № 518159"
 
 #: core/templates/core/requisites.html
 msgid "Qurilish vazirligi litsenziyasi № 518159 (muddatsiz)"
@@ -1236,6 +1228,10 @@ msgstr "Лицензия Министерства строительства №
 #: core/views.py
 msgid "Qurilishda nazorat oʻlchovi"
 msgstr "Контрольный обмер в строительстве"
+
+#: core/templates/core/home.html
+msgid "Qurilishdagi bajarilgan ishlar va obyektning energiya samaradorligini hujjat, o‘lchov va ekspert xulosasi bilan tekshiramiz."
+msgstr "Проверяем выполненные строительные работы и энергоэффективность объекта на основе документов и измерений с выдачей экспертного заключения."
 
 #: core/templates/core/company.html
 #: core/templates/core/home.html
@@ -1469,10 +1465,6 @@ msgstr "Описание фото (alt)"
 #: core/templates/core/contact.html
 msgid "TTT Audit bilan bogʻlanish: Fargʻonadagi ofis manzili xaritada, telefonlar, e-pochta va murojaat formasi."
 msgstr "Контакты TTT Audit: адрес офиса в Фергане на карте, телефоны, электронная почта и форма обращения."
-
-#: core/templates/core/home.html
-msgid "Tadbirlar rejasi"
-msgstr "План мероприятий"
 
 #: core/models.py
 msgid "Taklif yuborildi"
@@ -1771,12 +1763,10 @@ msgstr "Метка"
 msgid "Yoʻnalish"
 msgstr "Направление"
 
-#: core/templates/core/home.html
 #: core/templates/core/services.html
 msgid "Yoʻnalish sahifasi"
 msgstr "Страница направления"
 
-#: core/templates/core/home.html
 #: core/models.py
 msgid "Yoʻnalishlar"
 msgstr "Направления"
@@ -1909,6 +1899,10 @@ msgstr "т"
 #: core/home.py
 msgid "uchinchi tomon sifatida"
 msgstr "как третья сторона"
+
+#: core/templates/core/home.html
+msgid "va energiya auditi"
+msgstr "и энергетический аудит"
 
 #: core/templates/core/home.html
 msgid "xodim"

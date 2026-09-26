@@ -2,28 +2,25 @@
 {% block main %}
 <section class="hero"><div class="wrap hero__grid">
   <div class="hero__main">
-    <p class="hero__k">{{ site|tr:"hero_kicker" }}</p>
-    <h1>{{ title_main }}{% if title_accent %} <em>{{ title_accent }}</em>{% endif %}</h1>
-    <p class="hero__lede">{{ site|tr:"hero_text" }}</p>
+    <p class="hero__k">{% translate "Ekspert tashkiloti · Fargʻona · 1997-yildan" %}</p>
+    <h1>{% translate "Qurilish auditi" %} <em>{% translate "va energiya auditi" %}</em></h1>
+    <p class="hero__lede">{% translate "Qurilishdagi bajarilgan ishlar va obyektning energiya samaradorligini hujjat, o‘lchov va ekspert xulosasi bilan tekshiramiz." %}</p>
     <div class="hero__cta">
       <a class="btn" href="{% url 'core:request' %}">{% translate "Murojaat yuborish" %}</a>
-      <a class="btn btn--ghost" href="#talab">{% translate "Qaysi talab tegishli?" %}</a>
+      <a class="btn btn--ghost" href="#xizmatlar">{% translate "Ikki yoʻnalishni ko‘rish" %}</a>
     </div>
     {% translate "ЗРУ-940" as zru %}
-    <div class="prac" data-tabs>
-      <div class="prac__tabs" data-tablist aria-label="{% translate "Yoʻnalishlar" %}">
-        {% for d in directions %}<a class="prac__tab" href="#prac-{{ d.slug }}" id="prac-{{ d.slug }}-tab" data-tab="prac-{{ d.slug }}"{% if forloop.first %} aria-selected="true"{% endif %}>{% if d.accent == "amber" %}{% translate "Energoaudit" %}{% else %}{% translate "Qurilishda nazorat oʻlchovi" %}{% endif %}</a>{% endfor %}
-      </div>
-      {% for d in directions %}<div class="prac__panel" id="prac-{{ d.slug }}" data-panel>
-        {% if d.accent == "amber" %}
-        <div><h3>{% translate "Asos" %}</h3><p>{% blocktranslate %}{{ zru }} va VM qarori № 690; Energosamaradorlik milliy agentligi reestri, VM qarori № 673{% endblocktranslate %}</p></div>
-        <div><h3>{% translate "Qoʻlingizda" %}</h3><ul><li>{% translate "Energetik pasport" %}</li><li>{% translate "Energiya balansi" %}</li><li>{% translate "Tadbirlar rejasi" %}</li></ul></div>
-        {% else %}
-        <div><h3>{% translate "Asos" %}</h3><p>{% translate "Qurilish va uy-joy kommunal xoʻjaligi vazirligi litsenziyasi № 518159" %}</p></div>
-        <div><h3>{% translate "Qoʻlingizda" %}</h3><ul><li>{% translate "Nazorat oʻlchovi dalolatnomasi" %}</li><li>{% translate "Taqqoslash vedomosti" %}</li><li>{% translate "Ekspert xulosasi" %}</li></ul></div>
-        {% endif %}
-        <a class="prac__go" href="{{ d.get_absolute_url }}">{% translate "Yoʻnalish sahifasi" %} →</a>
-      </div>{% endfor %}
+    <div class="audit-pair" aria-label="{% translate "Asosiy audit yoʻnalishlari" %}">
+      {% for d in directions %}<article class="audit-card audit-card--{{ d.accent }}">
+        <span class="audit-card__no num">0{{ forloop.counter }}</span>
+        <div class="audit-card__body">
+          <p class="audit-card__type">{% if d.accent == "amber" %}{% translate "Energiya auditi" %}{% else %}{% translate "Qurilish auditi" %}{% endif %}</p>
+          <h2>{{ d|tr:"title" }}</h2>
+          <p>{{ d|tr:"summary" }}</p>
+          <span class="audit-card__meta num">{% if d.accent == "amber" %}{{ zru }} · № 673{% else %}{% translate "Litsenziya" %} № 518159{% endif %}</span>
+        </div>
+        <a class="audit-card__link" href="{{ d.get_absolute_url }}" aria-label="{{ d|tr:"title" }}">→</a>
+      </article>{% endfor %}
     </div>
   </div>
   <div class="hero__shot slides" data-slides tabindex="0" aria-roledescription="carousel" aria-label="{% translate "Yoʻnalishlar suratlarda" %}">
@@ -65,7 +62,7 @@
 <section class="sec" id="xizmatlar"><div class="wrap">
   <div class="sh">
     <p class="sh__k">{% translate "Xizmatlar" %}</p>
-    <div><h2>{% translate "Ikki yoʻnalish" %}</h2><p>{% translate "Energiya isteʼmolini tekshirish va qurilishda bajarilgan ish hajmini oʻlchash. Ikkalasi ham davlat hujjati bilan tasdiqlangan vakolat asosida." %}</p></div>
+    <div><h2>{% translate "Ikki audit yoʻnalishi" %}</h2><p>{% translate "Qurilish auditi bajarilgan ishlar, hajm va smetani; energiya auditi esa obyektning energiya samaradorligini tekshiradi. Har ikki yoʻnalish o‘lchov va hujjatga tayangan ekspert xulosasi bilan yakunlanadi." %}</p></div>
     <a class="more sh__aside" href="{% url 'core:services' %}">{% translate "Barcha xizmatlar" %} →</a>
   </div>
   <div class="dirs">

@@ -11,7 +11,7 @@ def test_home_renders_v3_sections(client):
     response = client.get("/uz/")
     assert response.status_code == 200
     html = response.content.decode()
-    assert "Energoaudit va <em>qurilishda nazorat oʻlchovi</em>" in html   # hero H1, ikkinchi qismi indigo
+    assert "Qurilish auditi <em>va energiya auditi</em>" in html       # ikki asosiy yoʻnalish teng ko‘rinadi
     assert 'class="facts"' in html                                    # faktlar tasmasi
     assert "Taqqoslash vedomosti" in html and "67 285 000" in html  # vedomost namunasi
     assert html.count('data-doc-panel') == 8                          # hujjat koʻrgich
@@ -26,8 +26,9 @@ def test_home_renders_v3_sections(client):
 @pytest.mark.django_db
 def test_home_ru_and_en_render(client):
     assert client.get("/ru/").status_code == 200
-    assert "Энергоаудит".encode() in client.get("/ru/").content
+    assert "Строительный аудит".encode() in client.get("/ru/").content
     assert client.get("/en/").status_code == 200
+    assert b"Construction audit" in client.get("/en/").content
 
 
 @pytest.mark.django_db

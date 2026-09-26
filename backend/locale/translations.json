@@ -131,6 +131,10 @@
     "en": "Evidence (from the text)",
     "ru": "Основание (из текста)"
   },
+  "Asosiy audit yoʻnalishlari": {
+    "en": "Core audit services",
+    "ru": "Основные направления аудита"
+  },
   "Asosiy faktlar": {
     "en": "Key facts",
     "ru": "Основные факты"
@@ -439,6 +443,10 @@
     "en": "Expert organisation",
     "ru": "Экспертная организация"
   },
+  "Ekspert tashkiloti · Fargʻona · 1997-yildan": {
+    "en": "Expert organisation · Fergana · since 1997",
+    "ru": "Экспертная организация · Фергана · с 1997 года"
+  },
   "Ekspert tashkiloti, 1997-yildan": {
     "en": "Expert organisation, since 1997",
     "ru": "Экспертная организация, с 1997 года"
@@ -458,6 +466,10 @@
   "Energetika va qurilish yoʻnalishiga yaqin, taniqli tashkilotlar.": {
     "en": "Well-known organisations close to the energy and construction sector.",
     "ru": "Известные организации, близкие к сфере энергетики и строительства."
+  },
+  "Energiya auditi": {
+    "en": "Energy audit",
+    "ru": "Энергетический аудит"
   },
   "Energiya balansi": {
     "en": "Energy balance",
@@ -695,6 +707,10 @@
     "en": "Social sharing image (OG)",
     "ru": "Изображение для соцсетей (OG)"
   },
+  "Ikki audit yoʻnalishi": {
+    "en": "Two audit services",
+    "ru": "Два направления аудита"
+  },
   "Ikki yoʻnalish": {
     "en": "Two practice areas",
     "ru": "Два направления"
@@ -702,6 +718,10 @@
   "Ikki yoʻnalish: energiya isteʼmolini tekshirish va qurilishda bajarilgan ish hajmini oʻlchash. Ikkalasi ham davlat hujjati bilan tasdiqlangan vakolat asosida.": {
     "en": "Two practice areas: checking energy consumption and measuring the volume of completed construction work. Both are based on authority confirmed by a state document.",
     "ru": "Два направления: проверка энергопотребления и измерение объёма выполненных строительных работ. Оба — на основании полномочий, подтверждённых государственным документом."
+  },
+  "Ikki yoʻnalishni ko‘rish": {
+    "en": "View both services",
+    "ru": "Посмотреть оба направления"
   },
   "Inglizcha": {
     "en": "English",
@@ -1447,6 +1467,14 @@
     "en": "Surveying instrument on a tripod in front of a building under construction and a tower crane",
     "ru": "Геодезический прибор на штативе перед строящимся зданием и башенным краном"
   },
+  "Qurilish auditi": {
+    "en": "Construction audit",
+    "ru": "Строительный аудит"
+  },
+  "Qurilish auditi bajarilgan ishlar, hajm va smetani; energiya auditi esa obyektning energiya samaradorligini tekshiradi. Har ikki yoʻnalish o‘lchov va hujjatga tayangan ekspert xulosasi bilan yakunlanadi.": {
+    "en": "Construction audit verifies completed work, quantities, and estimates; energy audit assesses a facility’s energy efficiency. Both result in an expert opinion based on measurements and documents.",
+    "ru": "Строительный аудит проверяет выполненные работы, объёмы и смету; энергетический аудит — энергоэффективность объекта. Оба направления завершаются экспертным заключением на основе измерений и документов."
+  },
   "Qurilish maydonida GNSS qabul qilgichli reyka bilan oʻlchayotgan mutaxassis": {
     "en": "Specialist measuring with a GNSS receiver pole on a construction site",
     "ru": "Специалист с GNSS-приёмником на вешке на строительной площадке"
@@ -1478,6 +1506,10 @@
   "Qurilishda nazorat oʻlchovi": {
     "en": "Construction control measurement",
     "ru": "Контрольный обмер в строительстве"
+  },
+  "Qurilishdagi bajarilgan ishlar va obyektning energiya samaradorligini hujjat, o‘lchov va ekspert xulosasi bilan tekshiramiz.": {
+    "en": "We verify completed construction work and a facility’s energy efficiency through documents and measurements, issuing an expert opinion.",
+    "ru": "Проверяем выполненные строительные работы и энергоэффективность объекта на основе документов и измерений с выдачей экспертного заключения."
   },
   "Quyidagi maʼlumot amaldagi hujjatlar asosida tayyorlangan. Qaror qabul qilishdan oldin lex.uz dagi joriy tahrirni tekshiring — qonunchilik 2024-yildan beri faol oʻzgarmoqda.": {
     "en": "The information below is based on the acts in force. Check the current version on lex.uz before deciding, as the legislation has been changing actively since 2024.",
@@ -2270,6 +2302,10 @@
   "uchinchi tomon sifatida": {
     "en": "as a third party",
     "ru": "как третья сторона"
+  },
+  "va energiya auditi": {
+    "en": "and energy audit",
+    "ru": "и энергетический аудит"
   },
   "xodim": {
     "en": "staff",

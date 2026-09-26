@@ -67,15 +67,13 @@ def test_insurance_fact_falls_back_when_stat_missing():
 
 
 @pytest.mark.django_db
-def test_hero_practice_tabs_work_without_js(client):
+def test_hero_shows_both_audit_directions_without_js(client):
     hero = _section(client.get("/uz/").content.decode(), '<section class="hero"')
-    assert hero.count('class="prac__tab"') == 2
-    assert '<a class="prac__tab" href="#prac-energoaudit"' in hero and 'href="#prac-olchov-auditi"' in hero
-    panels = re.findall(r'<div class="prac__panel" id="(prac-[a-z-]+)"([^>]*)>', hero)
-    assert [p[0] for p in panels] == ["prac-energoaudit", "prac-olchov-auditi"]
-    assert all("hidden" not in attrs for _, attrs in panels)          # ikkala panel JS'siz koʻrinadi
-    assert "VM qarori № 673" in hero and "litsenziyasi № 518159" in hero
-    assert "Energetik pasport" in hero and "Nazorat oʻlchovi dalolatnomasi" in hero
+    assert hero.count('class="audit-card ') == 2
+    assert 'class="audit-card audit-card--amber"' in hero
+    assert 'class="audit-card audit-card--steel"' in hero
+    assert "Energiya auditi" in hero and "Qurilish auditi" in hero
+    assert "№ 673" in hero and "Litsenziya № 518159" in hero
 
 
 def _slides(html):
@@ -187,12 +185,13 @@ def test_split_title_variants():
 
 
 @pytest.mark.django_db
-def test_hero_accent_from_settings_is_used(client):
+def test_hero_keeps_both_core_audit_directions(client):
     site = SiteSettings.load()
     site.hero_accent_uz = "Obyektda, asbob bilan."
     site.save()
     html = client.get("/uz/").content.decode()
-    assert "<em>Obyektda, asbob bilan.</em>" in html
+    assert "Qurilish auditi <em>va energiya auditi</em>" in html
+    assert "<em>Obyektda, asbob bilan.</em>" not in html
     assert "<em>Obyektda, asbob bilan.</em>" not in client.get("/en/").content.decode()
 
 
