@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 import { resolve } from "node:path";
 
 /**
- * Bitta bundle chiqaradi: frontend/dist/widgets/widgets.js
+ * Bitta bundle chiqaradi: backend/frontend/dist/widgets/widgets.js
  * Django uni {% static 'widgets/widgets.js' %} orqali oladi
  * (STATICFILES_DIRS ichida frontend/dist bor).
  *
@@ -18,7 +18,7 @@ import { resolve } from "node:path";
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: "dist",
+    outDir: resolve(__dirname, "../backend/frontend/dist"),
     emptyOutDir: true,
     cssCodeSplit: false,
     manifest: false,

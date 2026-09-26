@@ -7,9 +7,9 @@ from django.core.exceptions import ImproperlyConfigured
 BASE_DIR = Path(__file__).resolve().parent.parent
 # Lokal monorepoda frontend backend bilan yonma-yon turadi. Docker build esa
 # yig'ilgan bundle'ni BASE_DIR/frontend ichiga nusxalaydi.
-FRONTEND_DIR = BASE_DIR.parent / "frontend"
+FRONTEND_DIR = BASE_DIR / "frontend"
 if not FRONTEND_DIR.exists():
-    FRONTEND_DIR = BASE_DIR / "frontend"
+    FRONTEND_DIR = BASE_DIR.parent / "frontend"
 
 DEV_SECRET_KEY = "dev-only-not-for-production-change-me"
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY") or DEV_SECRET_KEY

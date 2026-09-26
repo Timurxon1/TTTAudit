@@ -2,7 +2,7 @@ from pathlib import Path
 
 from django.conf import settings
 
-DIST = Path(settings.FRONTEND_DIR) / "dist" / "widgets"
+DIST = Path(settings.BASE_DIR) / "frontend" / "dist" / "widgets"
 
 
 def test_widget_bundle_is_built():

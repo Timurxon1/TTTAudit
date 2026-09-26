@@ -20,7 +20,7 @@ python manage.py runserver
 Sayt: http://127.0.0.1:8000/uz/ · Admin: /admin/ · Testlar (`backend/` ichida): `pytest -q --cov=core`
 
 Testlardan oldin har doim repo ildizida `cd frontend && npm run build` bajaring — testlardan biri
-(`backend/core/tests/test_widgets_build.py`) yigʻilgan `frontend/dist/widgets/widgets.js` faylini tekshiradi.
+(`backend/core/tests/test_widgets_build.py`) yigʻilgan `backend/frontend/dist/widgets/widgets.js` faylini tekshiradi.
 
 ## Tuzilma
 - `backend/core/models.py` — kontent modellari (`_uz/_ru/_en` maydonlar, `{{ obj|tr:"title" }}`).
@@ -29,7 +29,7 @@ Testlardan oldin har doim repo ildizida `cd frontend && npm run build` bajaring 
   koʻrsatilmaydi (faqat solishtirma isteʼmol va energopasport talabi). Meʼyoriy hujjat tasdiqlangach `True`.
 - `backend/core/media.py` — ommaviy media va murojaat fayllarini xodimga berish; `backend/core/middleware.py` — soʻrov hajmi chegarasi.
 - `backend/core/templates/core/` — sahifalar; `backend/core/static/core/css/site.css` — dizayn tizimi.
-- `frontend/src/` — uchta React vidjet; `npm run build` → `frontend/dist/widgets/`.
+- `frontend/src/` — uchta React vidjet; `npm run build` → `backend/frontend/dist/widgets/`.
 - `backend/data/tttaudit/` — nashr uchun tayyorlangan JSON va ommaviy media (38 mutaxassis — 24 energetika / 14 qurilish,
   143 loyiha, 8 hujjat/sertifikat).
 - `backend/tools/prepare_logo.py` — `logo/` dagi PNG'dan sayt logotiplari (natija allaqachon commit qilingan; bu skript

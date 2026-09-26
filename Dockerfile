@@ -16,7 +16,7 @@ WORKDIR /app
 COPY backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY backend/ .
-COPY --from=widgets /w/dist ./frontend/dist
+COPY --from=widgets /backend/frontend ./frontend
 # Statika build bosqichida yigʻiladi; bazasiz ishlashi uchun oʻrinbosar maxfiy kalit.
 RUN DJANGO_SECRET_KEY=build-only python manage.py collectstatic --noinput
 # Ilova root boʻlmagan `app` foydalanuvchisi bilan ishlaydi. Konteyner root sifatida boshlanadi:
