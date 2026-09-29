@@ -20,16 +20,19 @@ export default defineConfig({
   build: {
     outDir: resolve(__dirname, "../backend/frontend/dist"),
     emptyOutDir: true,
-    cssCodeSplit: false,
+    cssCodeSplit: true,
     manifest: false,
     rollupOptions: {
-      input: resolve(__dirname, "src/main.jsx"),
+      input: {
+        widgets: resolve(__dirname, "src/main.jsx"),
+        admin: resolve(__dirname, "src/admin.jsx"),
+      },
       output: {
-        entryFileNames: "widgets/widgets.js",
-        chunkFileNames: "widgets/[name].js",
+        entryFileNames: (chunk) => chunk.name === "admin" ? "admin/admin.js" : "widgets/widgets.js",
+        chunkFileNames: "shared/[name].js",
         assetFileNames: (assetInfo) => {
           const name = assetInfo.name || (assetInfo.names && assetInfo.names[0]) || "";
-          if (name.endsWith(".css")) return "widgets/style.css";
+          if (name.endsWith(".css")) return name.includes("admin") ? "admin/admin.css" : "widgets/style.css";
           return "widgets/[name][extname]";
         },
       },

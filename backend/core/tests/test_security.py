@@ -46,7 +46,7 @@ def test_public_media_rejects_traversal_into_leads(client, lead_with_file):
 def test_lead_attachment_download_requires_staff(client, lead_with_file):
     url = f"/admin-files/lead/{lead_with_file.pk}/"
     anonymous = client.get(url)
-    assert anonymous.status_code == 302 and "/admin/login/" in anonymous["Location"]
+    assert anonymous.status_code == 302 and "/admin/" in anonymous["Location"]
 
     staff = get_user_model().objects.create_user("xodim", password="x-parol-123", is_staff=True)
     client.force_login(staff)
@@ -64,8 +64,9 @@ def test_lead_attachment_download_404_without_file(admin_client):
 
 @pytest.mark.django_db
 def test_lead_admin_shows_download_link(admin_client, lead_with_file):
-    html = admin_client.get(f"/admin/core/lead/{lead_with_file.pk}/change/").content.decode()
-    assert f"/admin-files/lead/{lead_with_file.pk}/" in html
+    response = admin_client.get(f"/admin/api/resources/leads/{lead_with_file.pk}/")
+    assert response.status_code == 200
+    assert response.json()["record"]["values"]["attachment"] == f"/admin-files/lead/{lead_with_file.pk}/"
 
 
 @pytest.mark.django_db

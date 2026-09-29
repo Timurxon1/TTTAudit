@@ -30,7 +30,7 @@ def public_media(request, path):
     return serve(request, normalized, document_root=settings.MEDIA_ROOT)
 
 
-@staff_member_required
+@staff_member_required(login_url="/admin/")
 def lead_attachment(request, pk):
     """Murojaatga biriktirilgan faylni faqat admin xodimiga yuklab beradi."""
     lead = get_object_or_404(Lead, pk=pk)

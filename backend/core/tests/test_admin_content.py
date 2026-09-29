@@ -106,12 +106,18 @@ def test_widget_text_form_validates_js_placeholders(site_texts):
 def test_site_text_admin_pages_render(client, staff, site_texts):
     client.force_login(staff)
     row = SiteText.objects.get(key="Murojaat yuborish")
-    assert client.get("/admin/core/sitetext/?q=Murojaat").status_code == 200
-    page = client.get(f"/admin/core/sitetext/{row.pk}/change/").content.decode()
-    assert "Standart matn" in page and "Отправить обращение" in page
+    listing = client.get("/admin/api/resources/texts/?q=Murojaat")
+    assert listing.status_code == 200
+    assert any(item["id"] == row.pk for item in listing.json()["records"])
+    detail = client.get(f"/admin/api/resources/texts/{row.pk}/")
+    assert detail.status_code == 200
+    assert detail.json()["record"]["values"]["text_ru"] == ""
 
 
-@pytest.mark.parametrize("url", ["/admin/core/slide/", "/admin/core/sitesettings/", "/admin/core/staffcertificate/"])
+@pytest.mark.parametrize("url", [
+    "/admin/api/resources/slides/", "/admin/api/resources/settings/",
+    "/admin/api/resources/staff-certificates/",
+])
 def test_content_admin_lists_render(client, staff, site_texts, url):
     client.force_login(staff)
     assert client.get(url).status_code == 200
