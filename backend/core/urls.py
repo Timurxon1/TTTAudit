@@ -7,7 +7,6 @@ app_name = "core"
 
 urlpatterns = [
     path("", views.home, name="home"),
-    path("dizaynlar/", views.designs, name="designs"),
     path("xizmatlar/", views.services, name="services"),
     path("xizmatlar/<slug:direction_slug>/", views.direction, name="direction"),
     path("xizmatlar/<slug:direction_slug>/<slug:slug>/", views.service, name="service"),
