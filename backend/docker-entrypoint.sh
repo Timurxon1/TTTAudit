@@ -26,6 +26,8 @@ python manage.py sync_site_content
 # PostgreSQL yozuvlari saqlanib, yangi container media papkasi bo'sh kelganda
 # repositorydagi nashr aktivlarini bazadagi mavjud yo'llar bo'yicha qayta tiklaydi.
 python manage.py sync_media
+# Secretlar faqat adminni birinchi marta sozlash paytida beriladi; yoʻq bo'lsa buyruq no-op.
+python manage.py bootstrap_admin
 
 # `exec` — gunicorn PID 1 boʻladi va SIGTERM'ni toʻgʻridan-toʻgʻri oladi
 exec gunicorn config.wsgi:application \
