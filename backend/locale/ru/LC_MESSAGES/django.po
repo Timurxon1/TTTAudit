@@ -156,6 +156,10 @@ msgstr "Выполненные работы"
 msgid "Bajarilgan ishlar reestri"
 msgstr "Реестр выполненных работ"
 
+#: core/templates/core/home.html
+msgid "Bajarilgan qurilish ishlarining haqiqiy hajmlarini tekshiramiz va obyektlarning energiya samaradorligini hujjatlar, ko‘riklar hamda instrumental o‘lchovlar asosida baholab, professional xulosa taqdim etamiz."
+msgstr "Проверяем фактические объёмы выполненных строительных работ и оцениваем энергоэффективность объектов на основании документации, обследований и инструментальных измерений с предоставлением профессионального заключения."
+
 #: core/templates/core/requisites.html
 msgid "Bank rekvizitlari"
 msgstr "Банковские реквизиты"
@@ -580,7 +584,7 @@ msgid "Ijtimoiy tarmoq surati (OG)"
 msgstr "Изображение для соцсетей (OG)"
 
 #: core/templates/core/home.html
-msgid "Ikki audit yoʻnalishi"
+msgid "Ikki ekspertiza yoʻnalishi"
 msgstr "Два направления экспертных услуг"
 
 #: core/templates/core/services.html
@@ -1014,6 +1018,10 @@ msgid "Nazorat oʻlchovida ishlatiladigan asboblar: model, zavod raqami, oʻlcho
 msgstr "Приборы для контрольного обмера: модель, заводской номер, диапазон измерений, свидетельство о поверке и срок действия."
 
 #: core/templates/core/home.html
+msgid "Nazorat o‘lchovi — bajarilgan qurilish-montaj va ta’mirlash-qurilish ishlarining haqiqiy hajmi hamda qiymatini loyiha-smeta va ijro hujjatlariga muvofiqligini tekshirishdir. Energiya auditi — obyektni kompleks tekshirish, energiya resurslari iste’molini tahlil qilish, energiya samaradorligini baholash va energiya tejash bo‘yicha tavsiyalar ishlab chiqishdir. Natijalar hujjatlar, ko‘riklar va instrumental o‘lchovlar asosida tegishli hisobot hamda xulosalar bilan rasmiylashtiriladi."
+msgstr "Контрольный обмер — проверка фактических объёмов и стоимости выполненных строительно-монтажных и ремонтно-строительных работ на соответствие проектно-сметной и исполнительной документации. Энергетический аудит — комплексное обследование объекта, анализ потребления энергетических ресурсов, оценка энергоэффективности и разработка рекомендаций по энергосбережению. Результаты работ оформляются соответствующими отчётами и заключениями на основании изучения документации, обследований и инструментальных измерений."
+
+#: core/templates/core/home.html
 msgid "Nivelir orqali qarayotgan kaskali mutaxassis"
 msgstr "Специалист в каске смотрит в нивелир"
 
@@ -1197,10 +1205,6 @@ msgid "Qurilish auditi"
 msgstr "Контрольный обмер"
 
 #: core/templates/core/home.html
-msgid "Qurilish auditi bajarilgan ishlar, hajm va smetani; energiya auditi esa obyektning energiya samaradorligini tekshiradi. Har ikki yoʻnalish o‘lchov va hujjatga tayangan ekspert xulosasi bilan yakunlanadi."
-msgstr "Контрольный обмер — проверка фактических объёмов и стоимости выполненных строительно-монтажных и ремонтно-строительных работ на соответствие проектно-сметной и исполнительной документации. Энергетический аудит — комплексное обследование объекта, анализ потребления энергетических ресурсов, оценка энергоэффективности и разработка рекомендаций по энергосбережению. Результаты работ оформляются соответствующими отчётами и заключениями на основании изучения документации, обследований и инструментальных измерений."
-
-#: core/templates/core/home.html
 msgid "Qurilish maydonida GNSS qabul qilgichli reyka bilan oʻlchayotgan mutaxassis"
 msgstr "Специалист с GNSS-приёмником на вешке на строительной площадке"
 
@@ -1225,10 +1229,6 @@ msgstr "Лицензия Министерства строительства №
 #: core/views.py
 msgid "Qurilishda nazorat oʻlchovi"
 msgstr "Контрольный обмер в строительстве"
-
-#: core/templates/core/home.html
-msgid "Qurilishdagi bajarilgan ishlar va obyektning energiya samaradorligini hujjat, o‘lchov va ekspert xulosasi bilan tekshiramiz."
-msgstr "Проверяем фактические объёмы выполненных строительных работ и оцениваем энергоэффективность объектов на основании документации, обследований и инструментальных измерений с предоставлением профессионального заключения."
 
 #: core/templates/core/company.html
 #: core/templates/core/home.html

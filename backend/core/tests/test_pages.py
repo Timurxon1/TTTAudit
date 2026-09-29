@@ -51,7 +51,7 @@ def test_root_redirects_to_uz(client):
 @pytest.mark.django_db
 def test_services_hub_lists_both_directions(client):
     html = client.get("/uz/xizmatlar/").content.decode()
-    assert "Energosamaradorlik auditi" in html
+    assert "Energiya auditi" in html
     assert "Qurilishda nazorat oʻlchovi" in html
     assert html.count('data-direction="') == 2
 
@@ -124,7 +124,7 @@ def test_registry_paginates_and_filters(client):
     energy = client.get("/uz/reestr/?d=energoaudit").content.decode()
     assert "Topildi: 48 ta" in energy
     assert '<td class="tbl__dir">Qurilishda nazorat oʻlchovi</td>' not in energy
-    assert '<td class="tbl__dir">Energosamaradorlik auditi</td>' in energy
+    assert '<td class="tbl__dir">Energiya auditi</td>' in energy
 
     year = client.get("/uz/reestr/?y=2023").content.decode()
     assert "Topildi: 20 ta" in year

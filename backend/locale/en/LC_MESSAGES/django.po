@@ -156,6 +156,10 @@ msgstr "Completed work"
 msgid "Bajarilgan ishlar reestri"
 msgstr "Registry of completed work"
 
+#: core/templates/core/home.html
+msgid "Bajarilgan qurilish ishlarining haqiqiy hajmlarini tekshiramiz va obyektlarning energiya samaradorligini hujjatlar, ko‘riklar hamda instrumental o‘lchovlar asosida baholab, professional xulosa taqdim etamiz."
+msgstr "We verify the actual quantities of completed construction work and assess facility energy efficiency based on documentation, inspections and instrumental measurements, providing a professional opinion."
+
 #: core/templates/core/requisites.html
 msgid "Bank rekvizitlari"
 msgstr "Bank details"
@@ -580,8 +584,8 @@ msgid "Ijtimoiy tarmoq surati (OG)"
 msgstr "Social sharing image (OG)"
 
 #: core/templates/core/home.html
-msgid "Ikki audit yoʻnalishi"
-msgstr "Two audit services"
+msgid "Ikki ekspertiza yoʻnalishi"
+msgstr "Two areas of expert services"
 
 #: core/templates/core/services.html
 msgid "Ikki yoʻnalish"
@@ -1014,6 +1018,10 @@ msgid "Nazorat oʻlchovida ishlatiladigan asboblar: model, zavod raqami, oʻlcho
 msgstr "Instruments used for control measurement: model, serial number, measuring range, verification certificate and validity period."
 
 #: core/templates/core/home.html
+msgid "Nazorat o‘lchovi — bajarilgan qurilish-montaj va ta’mirlash-qurilish ishlarining haqiqiy hajmi hamda qiymatini loyiha-smeta va ijro hujjatlariga muvofiqligini tekshirishdir. Energiya auditi — obyektni kompleks tekshirish, energiya resurslari iste’molini tahlil qilish, energiya samaradorligini baholash va energiya tejash bo‘yicha tavsiyalar ishlab chiqishdir. Natijalar hujjatlar, ko‘riklar va instrumental o‘lchovlar asosida tegishli hisobot hamda xulosalar bilan rasmiylashtiriladi."
+msgstr "Control measurement verifies the actual quantities and value of completed construction, installation and repair works against the design, estimate and as-built documentation. An energy audit is a comprehensive facility assessment covering energy-resource consumption, energy-efficiency evaluation and energy-saving recommendations. The results are formalised in reports and professional opinions based on document review, inspections and instrumental measurements."
+
+#: core/templates/core/home.html
 msgid "Nivelir orqali qarayotgan kaskali mutaxassis"
 msgstr "Specialist in a hard hat looking through a level"
 
@@ -1197,10 +1205,6 @@ msgid "Qurilish auditi"
 msgstr "Construction audit"
 
 #: core/templates/core/home.html
-msgid "Qurilish auditi bajarilgan ishlar, hajm va smetani; energiya auditi esa obyektning energiya samaradorligini tekshiradi. Har ikki yoʻnalish o‘lchov va hujjatga tayangan ekspert xulosasi bilan yakunlanadi."
-msgstr "Construction audit verifies completed work, quantities, and estimates; energy audit assesses a facility’s energy efficiency. Both result in an expert opinion based on measurements and documents."
-
-#: core/templates/core/home.html
 msgid "Qurilish maydonida GNSS qabul qilgichli reyka bilan oʻlchayotgan mutaxassis"
 msgstr "Specialist measuring with a GNSS receiver pole on a construction site"
 
@@ -1225,10 +1229,6 @@ msgstr "Ministry of Construction licence No. 518159, energy audit registry, UZAC
 #: core/views.py
 msgid "Qurilishda nazorat oʻlchovi"
 msgstr "Construction control measurement"
-
-#: core/templates/core/home.html
-msgid "Qurilishdagi bajarilgan ishlar va obyektning energiya samaradorligini hujjat, o‘lchov va ekspert xulosasi bilan tekshiramiz."
-msgstr "We verify completed construction work and a facility’s energy efficiency through documents and measurements, issuing an expert opinion."
 
 #: core/templates/core/company.html
 #: core/templates/core/home.html

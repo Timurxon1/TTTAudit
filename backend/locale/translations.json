@@ -175,6 +175,10 @@
     "en": "Registry of completed work",
     "ru": "Реестр выполненных работ"
   },
+  "Bajarilgan qurilish ishlarining haqiqiy hajmlarini tekshiramiz va obyektlarning energiya samaradorligini hujjatlar, ko‘riklar hamda instrumental o‘lchovlar asosida baholab, professional xulosa taqdim etamiz.": {
+    "en": "We verify the actual quantities of completed construction work and assess facility energy efficiency based on documentation, inspections and instrumental measurements, providing a professional opinion.",
+    "ru": "Проверяем фактические объёмы выполненных строительных работ и оцениваем энергоэффективность объектов на основании документации, обследований и инструментальных измерений с предоставлением профессионального заключения."
+  },
   "Bank rekvizitlari": {
     "en": "Bank details",
     "ru": "Банковские реквизиты"
@@ -711,6 +715,10 @@
     "en": "Two audit services",
     "ru": "Два направления экспертных услуг"
   },
+  "Ikki ekspertiza yoʻnalishi": {
+    "en": "Two areas of expert services",
+    "ru": "Два направления экспертных услуг"
+  },
   "Ikki yoʻnalish": {
     "en": "Two practice areas",
     "ru": "Два направления"
@@ -1234,6 +1242,10 @@
   "Nazorat oʻlchovida ishlatiladigan asboblar: model, zavod raqami, oʻlchov chegarasi, qiyoslash guvohnomasi va amal qilish muddati.": {
     "en": "Instruments used for control measurement: model, serial number, measuring range, verification certificate and validity period.",
     "ru": "Приборы для контрольного обмера: модель, заводской номер, диапазон измерений, свидетельство о поверке и срок действия."
+  },
+  "Nazorat o‘lchovi — bajarilgan qurilish-montaj va ta’mirlash-qurilish ishlarining haqiqiy hajmi hamda qiymatini loyiha-smeta va ijro hujjatlariga muvofiqligini tekshirishdir. Energiya auditi — obyektni kompleks tekshirish, energiya resurslari iste’molini tahlil qilish, energiya samaradorligini baholash va energiya tejash bo‘yicha tavsiyalar ishlab chiqishdir. Natijalar hujjatlar, ko‘riklar va instrumental o‘lchovlar asosida tegishli hisobot hamda xulosalar bilan rasmiylashtiriladi.": {
+    "en": "Control measurement verifies the actual quantities and value of completed construction, installation and repair works against the design, estimate and as-built documentation. An energy audit is a comprehensive facility assessment covering energy-resource consumption, energy-efficiency evaluation and energy-saving recommendations. The results are formalised in reports and professional opinions based on document review, inspections and instrumental measurements.",
+    "ru": "Контрольный обмер — проверка фактических объёмов и стоимости выполненных строительно-монтажных и ремонтно-строительных работ на соответствие проектно-сметной и исполнительной документации. Энергетический аудит — комплексное обследование объекта, анализ потребления энергетических ресурсов, оценка энергоэффективности и разработка рекомендаций по энергосбережению. Результаты работ оформляются соответствующими отчётами и заключениями на основании изучения документации, обследований и инструментальных измерений."
   },
   "Nivelir orqali qarayotgan kaskali mutaxassis": {
     "en": "Specialist in a hard hat looking through a level",
