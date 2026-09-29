@@ -34,10 +34,6 @@ msgstr "Technical supervision staff: %(n)s"
 msgid "%(n)s ta loyiha"
 msgstr "%(n)s projects"
 
-#: core/templates/core/home.html
-msgid "%(n)s ta loyiha, %(a)s–%(b)s"
-msgstr "%(n)s projects, %(a)s–%(b)s"
-
 #: core/templates/core/_person.html
 msgid "%(n)s ta sertifikat"
 msgstr "Certificates: %(n)s"
@@ -145,10 +141,6 @@ msgstr "Main menu"
 msgid "Axborot byulleteni"
 msgstr "Information bulletin"
 
-#: core/templates/core/home.html
-msgid "Axborot byulletenidagi roʻyxat: %(e)s ta energoaudit va %(c)s ta nazorat oʻlchovi."
-msgstr "From the information bulletin: %(e)s energy audits and %(c)s control measurements."
-
 #: core/models.py
 msgid "Aʼzolik"
 msgstr "Membership"
@@ -158,6 +150,7 @@ msgid "Bajarilgan ishlar"
 msgstr "Completed work"
 
 #: core/templates/core/base.html
+#: core/templates/core/home.html
 #: core/templates/core/registry.html
 #: core/views.py
 msgid "Bajarilgan ishlar reestri"
@@ -733,6 +726,10 @@ msgstr "Regions with the most projects"
 #: core/templates/core/home.html
 msgid "Koʻp soʻraladigan savollar"
 msgstr "Frequently asked questions"
+
+#: core/templates/core/home.html
+msgid "Koʻp yillik professional faoliyat davomida «TTT-AUDIT» davlat tashkilotlari, yirik korxonalar va xususiy biznes uchun ko‘plab loyihalarni amalga oshirdi. Reestrda tashkilot faoliyati yoʻnalishlari boʻyicha %(n)s ta bajarilgan ish taqdim etilgan."
+msgstr "Over years of professional practice, TTT-AUDIT has delivered numerous projects for government organisations, major enterprises and private businesses. The registry contains %(n)s completed assignments across the organisation’s areas of activity."
 
 #: core/site_models.py
 msgid "Koʻrsatilsin"
@@ -1934,6 +1931,7 @@ msgstr "ZRU-940"
 msgid "ЗРУ-940 ga koʻra davriy energoaudit majburiy tartibda besh yilda kamida bir marta oʻtkaziladi. Davlat energetika reestriga kiritilgan korxonalar va davlat ishtirokidagi tashkilotlar uchun audit majburiy; boshqalar uchun ixtiyoriy."
 msgstr "Under Law No. ZRU-940, periodic energy audit is mandatory at least once every five years. For enterprises included in the State Energy Registry and organisations with state participation, the audit is mandatory; for others, it is voluntary."
 
+#: core/templates/core/home.html
 #: core/compliance.py
 msgid "ЗРУ-940 · VM № 690"
 msgstr "ZRU-940 · CM Resolution No. 690"

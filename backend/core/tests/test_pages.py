@@ -26,7 +26,7 @@ def test_home_renders_v3_sections(client):
 @pytest.mark.django_db
 def test_home_ru_and_en_render(client):
     assert client.get("/ru/").status_code == 200
-    assert "Строительный аудит".encode() in client.get("/ru/").content
+    assert "Контрольный обмер".encode() in client.get("/ru/").content
     assert client.get("/en/").status_code == 200
     assert b"Construction audit" in client.get("/en/").content
 

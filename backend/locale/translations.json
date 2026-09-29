@@ -517,7 +517,7 @@
   },
   "Energosamaradorlik auditi": {
     "en": "Energy efficiency audit",
-    "ru": "Аудит энергоэффективности"
+    "ru": "Энергетический аудит"
   },
   "Energosamaradorlik toifasi energopasportda belgilanadi.": {
     "en": "The energy efficiency class is set in the energy passport.",
@@ -709,7 +709,7 @@
   },
   "Ikki audit yoʻnalishi": {
     "en": "Two audit services",
-    "ru": "Два направления аудита"
+    "ru": "Два направления экспертных услуг"
   },
   "Ikki yoʻnalish": {
     "en": "Two practice areas",
@@ -918,6 +918,10 @@
   "Koʻp soʻraladigan savollar": {
     "en": "Frequently asked questions",
     "ru": "Часто задаваемые вопросы"
+  },
+  "Koʻp yillik professional faoliyat davomida «TTT-AUDIT» davlat tashkilotlari, yirik korxonalar va xususiy biznes uchun ko‘plab loyihalarni amalga oshirdi. Reestrda tashkilot faoliyati yoʻnalishlari boʻyicha %(n)s ta bajarilgan ish taqdim etilgan.": {
+    "en": "Over years of professional practice, TTT-AUDIT has delivered numerous projects for government organisations, major enterprises and private businesses. The registry contains %(n)s completed assignments across the organisation’s areas of activity.",
+    "ru": "За годы профессиональной деятельности ООО «TTT-AUDIT» реализовало значительное количество проектов для государственных организаций, крупных предприятий и частного бизнеса. В реестре представлены %(n)s выполненные работы по направлениям деятельности организации."
   },
   "Koʻrsatilsin": {
     "en": "Visible",
@@ -1469,11 +1473,11 @@
   },
   "Qurilish auditi": {
     "en": "Construction audit",
-    "ru": "Строительный аудит"
+    "ru": "Контрольный обмер"
   },
   "Qurilish auditi bajarilgan ishlar, hajm va smetani; energiya auditi esa obyektning energiya samaradorligini tekshiradi. Har ikki yoʻnalish o‘lchov va hujjatga tayangan ekspert xulosasi bilan yakunlanadi.": {
     "en": "Construction audit verifies completed work, quantities, and estimates; energy audit assesses a facility’s energy efficiency. Both result in an expert opinion based on measurements and documents.",
-    "ru": "Строительный аудит проверяет выполненные работы, объёмы и смету; энергетический аудит — энергоэффективность объекта. Оба направления завершаются экспертным заключением на основе измерений и документов."
+    "ru": "Контрольный обмер — проверка фактических объёмов и стоимости выполненных строительно-монтажных и ремонтно-строительных работ на соответствие проектно-сметной и исполнительной документации. Энергетический аудит — комплексное обследование объекта, анализ потребления энергетических ресурсов, оценка энергоэффективности и разработка рекомендаций по энергосбережению. Результаты работ оформляются соответствующими отчётами и заключениями на основании изучения документации, обследований и инструментальных измерений."
   },
   "Qurilish maydonida GNSS qabul qilgichli reyka bilan oʻlchayotgan mutaxassis": {
     "en": "Specialist measuring with a GNSS receiver pole on a construction site",
@@ -1509,7 +1513,7 @@
   },
   "Qurilishdagi bajarilgan ishlar va obyektning energiya samaradorligini hujjat, o‘lchov va ekspert xulosasi bilan tekshiramiz.": {
     "en": "We verify completed construction work and a facility’s energy efficiency through documents and measurements, issuing an expert opinion.",
-    "ru": "Проверяем выполненные строительные работы и энергоэффективность объекта на основе документов и измерений с выдачей экспертного заключения."
+    "ru": "Проверяем фактические объёмы выполненных строительных работ и оцениваем энергоэффективность объектов на основании документации, обследований и инструментальных измерений с предоставлением профессионального заключения."
   },
   "Quyidagi maʼlumot amaldagi hujjatlar asosida tayyorlangan. Qaror qabul qilishdan oldin lex.uz dagi joriy tahrirni tekshiring — qonunchilik 2024-yildan beri faol oʻzgarmoqda.": {
     "en": "The information below is based on the acts in force. Check the current version on lex.uz before deciding, as the legislation has been changing actively since 2024.",

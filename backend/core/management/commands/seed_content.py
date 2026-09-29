@@ -34,10 +34,13 @@ DIRECTIONS = [
         "accent": Direction.ACCENT_AMBER,
         "kicker_uz": "Yoʻnalish I", "kicker_ru": "Направление I", "kicker_en": "Practice I",
         "title_uz": "Energosamaradorlik auditi",
-        "title_ru": "Аудит энергоэффективности",
+        "title_ru": "Энергетический аудит",
         "title_en": "Energy efficiency audit",
         "summary_uz": "ЗРУ-940 boʻyicha majburiy energoaudit, bino energopasporti va energosamaradorlik toifasi.",
-        "summary_ru": "Обязательный энергоаудит по Закону № ЗРУ-940, энергопаспорт здания и категория энергоэффективности.",
+        "summary_ru": ("Проводим энергетический аудит в соответствии с требованиями законодательства "
+                       "Республики Узбекистан, включая Закон № ЗРУ-940 и Постановление Кабинета Министров № 690. "
+                       "Оцениваем эффективность использования энергоресурсов, определяем потенциал энергосбережения, "
+                       "разрабатываем рекомендации по повышению энергоэффективности и энергетический паспорт объекта."),
         "summary_en": "Mandatory energy audit under ZRU-940, building energy passport and efficiency category.",
         "problem_title_uz": "Nega bu endi majburiy",
         "problem_title_ru": "Почему это теперь обязательно",
@@ -103,7 +106,9 @@ DIRECTIONS = [
         "title_ru": "Контрольный обмер в строительстве",
         "title_en": "Construction control measurement",
         "summary_uz": "Bajarilgan ishlar hajmi va smeta hujjatdagi raqamga mosmi — nazorat oʻlchovi va smeta tahlili.",
-        "summary_ru": "Соответствуют ли объёмы и смета цифрам в документах — контрольный обмер и анализ сметы.",
+        "summary_ru": ("Проверяем соответствие фактически выполненных строительно-монтажных и ремонтно-строительных "
+                       "работ проектно-сметной и исполнительной документации, анализируем объёмы и стоимость "
+                       "выполненных работ."),
         "summary_en": "Do completed volumes and the estimate match the documents — control measurement and estimate review.",
         "problem_title_uz": "Muammo qanday tugʻiladi",
         "problem_title_ru": "Как возникает проблема",

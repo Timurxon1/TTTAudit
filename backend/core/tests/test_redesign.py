@@ -73,7 +73,7 @@ def test_hero_shows_both_audit_directions_without_js(client):
     assert 'class="audit-card audit-card--amber"' in hero
     assert 'class="audit-card audit-card--steel"' in hero
     assert "Energiya auditi" in hero and "Qurilish auditi" in hero
-    assert "№ 673" in hero and "Litsenziya № 518159" in hero
+    assert "№ 690" in hero and "Litsenziya № 518159" in hero
 
 
 def _slides(html):

@@ -34,10 +34,6 @@ msgstr "Сотрудников технического надзора: %(n)s"
 msgid "%(n)s ta loyiha"
 msgstr "Проектов: %(n)s"
 
-#: core/templates/core/home.html
-msgid "%(n)s ta loyiha, %(a)s–%(b)s"
-msgstr "Проектов: %(n)s, %(a)s–%(b)s"
-
 #: core/templates/core/_person.html
 msgid "%(n)s ta sertifikat"
 msgstr "Сертификатов: %(n)s"
@@ -145,10 +141,6 @@ msgstr "Основное меню"
 msgid "Axborot byulleteni"
 msgstr "Информационный бюллетень"
 
-#: core/templates/core/home.html
-msgid "Axborot byulletenidagi roʻyxat: %(e)s ta energoaudit va %(c)s ta nazorat oʻlchovi."
-msgstr "По информационному бюллетеню: энергоаудит — %(e)s, контрольный обмер — %(c)s."
-
 #: core/models.py
 msgid "Aʼzolik"
 msgstr "Членство"
@@ -158,6 +150,7 @@ msgid "Bajarilgan ishlar"
 msgstr "Выполненные работы"
 
 #: core/templates/core/base.html
+#: core/templates/core/home.html
 #: core/templates/core/registry.html
 #: core/views.py
 msgid "Bajarilgan ishlar reestri"
@@ -427,7 +420,7 @@ msgstr "Энергоаудит, энергопаспорт здания, кон�
 
 #: core/templates/core/home.html
 msgid "Energosamaradorlik auditi"
-msgstr "Аудит энергоэффективности"
+msgstr "Энергетический аудит"
 
 #: core/templates/core/_energy.html
 msgid "Energosamaradorlik toifasi energopasportda belgilanadi."
@@ -588,7 +581,7 @@ msgstr "Изображение для соцсетей (OG)"
 
 #: core/templates/core/home.html
 msgid "Ikki audit yoʻnalishi"
-msgstr "Два направления аудита"
+msgstr "Два направления экспертных услуг"
 
 #: core/templates/core/services.html
 msgid "Ikki yoʻnalish"
@@ -733,6 +726,10 @@ msgstr "Регионы с наибольшим числом проектов"
 #: core/templates/core/home.html
 msgid "Koʻp soʻraladigan savollar"
 msgstr "Часто задаваемые вопросы"
+
+#: core/templates/core/home.html
+msgid "Koʻp yillik professional faoliyat davomida «TTT-AUDIT» davlat tashkilotlari, yirik korxonalar va xususiy biznes uchun ko‘plab loyihalarni amalga oshirdi. Reestrda tashkilot faoliyati yoʻnalishlari boʻyicha %(n)s ta bajarilgan ish taqdim etilgan."
+msgstr "За годы профессиональной деятельности ООО «TTT-AUDIT» реализовало значительное количество проектов для государственных организаций, крупных предприятий и частного бизнеса. В реестре представлены %(n)s выполненные работы по направлениям деятельности организации."
 
 #: core/site_models.py
 msgid "Koʻrsatilsin"
@@ -1197,11 +1194,11 @@ msgstr "Геодезический прибор на штативе перед �
 
 #: core/templates/core/home.html
 msgid "Qurilish auditi"
-msgstr "Строительный аудит"
+msgstr "Контрольный обмер"
 
 #: core/templates/core/home.html
 msgid "Qurilish auditi bajarilgan ishlar, hajm va smetani; energiya auditi esa obyektning energiya samaradorligini tekshiradi. Har ikki yoʻnalish o‘lchov va hujjatga tayangan ekspert xulosasi bilan yakunlanadi."
-msgstr "Строительный аудит проверяет выполненные работы, объёмы и смету; энергетический аудит — энергоэффективность объекта. Оба направления завершаются экспертным заключением на основе измерений и документов."
+msgstr "Контрольный обмер — проверка фактических объёмов и стоимости выполненных строительно-монтажных и ремонтно-строительных работ на соответствие проектно-сметной и исполнительной документации. Энергетический аудит — комплексное обследование объекта, анализ потребления энергетических ресурсов, оценка энергоэффективности и разработка рекомендаций по энергосбережению. Результаты работ оформляются соответствующими отчётами и заключениями на основании изучения документации, обследований и инструментальных измерений."
 
 #: core/templates/core/home.html
 msgid "Qurilish maydonida GNSS qabul qilgichli reyka bilan oʻlchayotgan mutaxassis"
@@ -1231,7 +1228,7 @@ msgstr "Контрольный обмер в строительстве"
 
 #: core/templates/core/home.html
 msgid "Qurilishdagi bajarilgan ishlar va obyektning energiya samaradorligini hujjat, o‘lchov va ekspert xulosasi bilan tekshiramiz."
-msgstr "Проверяем выполненные строительные работы и энергоэффективность объекта на основе документов и измерений с выдачей экспертного заключения."
+msgstr "Проверяем фактические объёмы выполненных строительных работ и оцениваем энергоэффективность объектов на основании документации, обследований и инструментальных измерений с предоставлением профессионального заключения."
 
 #: core/templates/core/company.html
 #: core/templates/core/home.html
@@ -1934,6 +1931,7 @@ msgstr "Закон № ЗРУ-940"
 msgid "ЗРУ-940 ga koʻra davriy energoaudit majburiy tartibda besh yilda kamida bir marta oʻtkaziladi. Davlat energetika reestriga kiritilgan korxonalar va davlat ishtirokidagi tashkilotlar uchun audit majburiy; boshqalar uchun ixtiyoriy."
 msgstr "В соответствии с Законом № ЗРУ-940 периодический энергоаудит обязателен не реже одного раза в пять лет. Для предприятий, включённых в Государственный энергетический реестр, и организаций с государственным участием аудит обязателен; для остальных — добровольный."
 
+#: core/templates/core/home.html
 #: core/compliance.py
 msgid "ЗРУ-940 · VM № 690"
 msgstr "Закон № ЗРУ-940 · Постановление КМ № 690"

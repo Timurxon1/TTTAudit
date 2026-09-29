@@ -10,6 +10,7 @@
       <a class="btn btn--ghost" href="#xizmatlar">{% translate "Ikki yoʻnalishni ko‘rish" %}</a>
     </div>
     {% translate "ЗРУ-940" as zru %}
+    {% translate "ЗРУ-940 · VM № 690" as energy_basis %}
     <div class="audit-pair" aria-label="{% translate "Asosiy audit yoʻnalishlari" %}">
       {% for d in directions %}<article class="audit-card audit-card--{{ d.accent }}">
         <span class="audit-card__no num">0{{ forloop.counter }}</span>
@@ -17,7 +18,7 @@
           <p class="audit-card__type">{% if d.accent == "amber" %}{% translate "Energiya auditi" %}{% else %}{% translate "Qurilish auditi" %}{% endif %}</p>
           <h2>{{ d|tr:"title" }}</h2>
           <p>{{ d|tr:"summary" }}</p>
-          <span class="audit-card__meta num">{% if d.accent == "amber" %}{{ zru }} · № 673{% else %}{% translate "Litsenziya" %} № 518159{% endif %}</span>
+          <span class="audit-card__meta num">{% if d.accent == "amber" %}{{ energy_basis }}{% else %}{% translate "Litsenziya" %} № 518159{% endif %}</span>
         </div>
         <a class="audit-card__link" href="{{ d.get_absolute_url }}" aria-label="{{ d|tr:"title" }}">→</a>
       </article>{% endfor %}
@@ -122,7 +123,7 @@
 <section class="sec" id="loyihalar"><div class="wrap">
   <div class="sh">
     <p class="sh__k">{% translate "Loyihalar" %}</p>
-    <div><h2>{% blocktranslate with n=facts.projects a=facts.year_first b=facts.year_last %}{{ n }} ta loyiha, {{ a }}–{{ b }}{% endblocktranslate %}</h2><p>{% blocktranslate with e=facts.projects_energy c=facts.projects_construction %}Axborot byulletenidagi roʻyxat: {{ e }} ta energoaudit va {{ c }} ta nazorat oʻlchovi.{% endblocktranslate %}</p></div>
+    <div><h2>{% translate "Bajarilgan ishlar reestri" %}</h2><p>{% blocktranslate with n=facts.projects %}Koʻp yillik professional faoliyat davomida «TTT-AUDIT» davlat tashkilotlari, yirik korxonalar va xususiy biznes uchun ko‘plab loyihalarni amalga oshirdi. Reestrda tashkilot faoliyati yoʻnalishlari boʻyicha {{ n }} ta bajarilgan ish taqdim etilgan.{% endblocktranslate %}</p></div>
     <a class="more sh__aside" href="{% url 'core:registry' %}">{% translate "Toʻliq reestr" %} →</a>
   </div>
   {% include "core/_uzmap.html" %}
