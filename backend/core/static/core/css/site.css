@@ -50,10 +50,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .hdr{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}
 .hdr .wrap{display:flex;align-items:center;gap:24px;min-height:72px;position:relative}
 .logo{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);flex:none}
-.logo img{height:42px;width:42px}
-.logo__t{display:flex;flex-direction:column;line-height:1}
-.logo__t b{font:700 22px/1 var(--f-cond);letter-spacing:.04em;color:var(--indigo)}
-.logo__t span{font-size:10.5px;color:var(--ink3);text-transform:uppercase;letter-spacing:.06em;margin-top:5px;white-space:nowrap}
+.logo img{height:58px;width:auto;max-width:150px;object-fit:contain}
 .nav{display:flex;gap:0 20px;margin-left:auto;font:500 15px/1 var(--f-body)}
 .nav a{color:var(--ink);text-decoration:none;padding:27px 0 25px;border-bottom:2px solid transparent;white-space:nowrap}
 .nav a:hover{border-bottom-color:var(--line)}
@@ -398,7 +395,8 @@ a.pm:focus-visible{outline:3px solid var(--yellow);outline-offset:4px}
 .ftr a{color:#D5D8E1;text-decoration:none}
 .ftr a:hover{color:var(--yellow)}
 .ftr__grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:28px;padding:48px 0 34px}
-.ftr__logo{height:72px;width:auto;margin:-8px 0 10px -6px}
+.ftr__logo-wrap{display:inline-flex;align-items:center;padding:7px 10px;margin:-8px 0 12px;background:#fff;border-radius:10px}
+.ftr__logo{height:64px;width:auto;margin:0}
 .ftr p{margin:0 0 8px}
 .ftr h4{margin:0 0 12px;font:600 12px/1 var(--f-body);letter-spacing:.08em;text-transform:uppercase;color:#6F7589}
 .ftr ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
@@ -463,7 +461,7 @@ a.pm:focus-visible{outline:3px solid var(--yellow);outline-offset:4px}
   .tbl--stack td.tbl__dir{grid-column:1;font-size:12.5px;white-space:normal}
   .tbl--stack td.r{grid-column:2;font-size:12.5px}
   .ubar .wrap{justify-content:flex-end}
-  .logo__t span{display:none}
+  .logo img{height:50px;max-width:130px}
   .hero__lede{font-size:16.5px}
   .hero__shot{aspect-ratio:4/3}
   .slides.is-ready .slide__cap{padding-right:16px}

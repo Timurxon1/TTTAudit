@@ -12,7 +12,8 @@ def test_base_template_has_gov_portal_chrome():
     assert 'class="ubar"' in html                       # yuqori xizmat paneli
     assert "Maxsus imkoniyatlar" in html                # a11y rejimi
     assert 'hreflang="ru"' in html and 'hreflang="en"' in html
-    assert "logo-mark.png" in html
+    assert "brand-logo.png" in html
+    assert "brand-mark.png" in html
     assert "TTT AUDIT" in html
     assert "REPER" not in html
     assert "auditorlik tashkiloti" not in html.lower()
