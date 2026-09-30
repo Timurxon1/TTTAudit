@@ -78,6 +78,21 @@ def test_member_timeline_uses_language_and_skips_bad_rows():
 
 
 @pytest.mark.django_db
+def test_new_team_portraits_are_not_zoomed_like_legacy_bulletin_photos():
+    member = TeamMember.objects.create(
+        full_name="Yangi Portret",
+        slug="yangi-portret",
+        role_uz="Mutaxassis",
+        dept=TeamMember.DEPT_ENERGY,
+        photo="team/photo_2026-09-30_09-42-20.jpg",
+    )
+    assert member.photo_has_band is False
+
+    member.photo = "team/legacy-bulletin.jpg"
+    assert member.photo_has_band is True
+
+
+@pytest.mark.django_db
 def test_migration_fills_unique_slugs_for_existing_members():
     import importlib
 

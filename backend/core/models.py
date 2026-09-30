@@ -491,8 +491,15 @@ class TeamMember(TranslatableMixin, models.Model):
 
     @property
     def photo_has_band(self) -> bool:
-        """Byulleten suratlari pastida rangli chiziq bor — kartada kesiladi. Direktor surati boshqa manbadan."""
-        return self.dept != self.DEPT_MANAGEMENT
+        """Eski byulleten suratidagi rangli chiziqni kesamiz; yangi portretlarni kattalashtirmaymiz."""
+        if self.dept == self.DEPT_MANAGEMENT or not self.photo:
+            return False
+        filename = self.photo.name.rsplit("/", 1)[-1].lower()
+        is_new_portrait = filename.startswith("photo_2026-09-30_") or filename in {
+            "jasur_jorayev.jpg",
+            "nuraliyev_shukurullo.jpg",
+        }
+        return not is_new_portrait
 
     def timeline(self, field: str) -> list[dict]:
         """`education` / `experience`: [{"years": ..., "text": ...}] joriy tilda (UZ ga qaytadi)."""
