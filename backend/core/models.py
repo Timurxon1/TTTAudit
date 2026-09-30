@@ -496,6 +496,7 @@ class TeamMember(TranslatableMixin, models.Model):
             return False
         filename = self.photo.name.rsplit("/", 1)[-1].lower()
         is_new_portrait = filename.startswith("photo_2026-09-30_") or filename in {
+            "dsc08371.jpg",
             "jasur_jorayev.jpg",
             "nuraliyev_shukurullo.jpg",
         }
