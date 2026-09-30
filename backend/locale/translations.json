@@ -83,6 +83,10 @@
     "en": "Valid until",
     "ru": "Действителен до"
   },
+  "Amalga oshirilgan loyihalardagi tajribamiz": {
+    "en": "Our experience in completed projects",
+    "ru": "Наш опыт в реализованных проектах"
+  },
   "Aniq": {
     "en": "Explicit",
     "ru": "Точно"
@@ -174,6 +178,10 @@
   "Bajarilgan ishlar reestri": {
     "en": "Registry of completed work",
     "ru": "Реестр выполненных работ"
+  },
+  "Bajarilgan ishlarning haqiqiy hajmlarini tekshirish": {
+    "en": "Verification of actual completed work quantities",
+    "ru": "Проверка фактически выполненных объёмов работ"
   },
   "Bajarilgan qurilish ishlarining haqiqiy hajmlarini tekshiramiz va obyektlarning energiya samaradorligini hujjatlar, ko‘riklar hamda instrumental o‘lchovlar asosida baholab, professional xulosa taqdim etamiz.": {
     "en": "We verify the actual quantities of completed construction work and assess facility energy efficiency based on documentation, inspections and instrumental measurements, providing a professional opinion.",
@@ -1314,6 +1322,10 @@
   "Obyektingizga qaysi toifa tegishli ekanini dastlabki baholashda aniqlaymiz.": {
     "en": "We determine your building's category during the pre-assessment.",
     "ru": "Категорию вашего объекта определим на предварительной оценке."
+  },
+  "Obyektlarning energiya samaradorligini baholash": {
+    "en": "Assessment of facility energy efficiency",
+    "ru": "Оценка энергоэффективности объектов"
   },
   "Ofis": {
     "en": "Office",

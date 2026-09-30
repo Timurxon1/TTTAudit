@@ -127,7 +127,7 @@ def _visible_markers(html):
 def test_home_renders_map_instead_of_table(client):
     html = client.get("/uz/").content.decode()
     section = _section(html, 'id="loyihalar"')
-    assert "Bajarilgan ishlar reestri" in section and "143 ta bajarilgan ish" in section
+    assert "Amalga oshirilgan loyihalardagi tajribamiz" in section and "143 ta bajarilgan ish" in section
     assert "Toʻliq reestr" in section
     assert "<table" not in section
     assert section.count('<path d="') + section.count('<path class="geo__rg"') == 28   # kontur + 14 hudud

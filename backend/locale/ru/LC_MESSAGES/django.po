@@ -81,6 +81,10 @@ msgstr "Действителен до"
 msgid "Amal qilish muddati"
 msgstr "Действителен до"
 
+#: core/templates/core/home.html
+msgid "Amalga oshirilgan loyihalardagi tajribamiz"
+msgstr "Наш опыт в реализованных проектах"
+
 #: core/models.py
 msgid "Aniq"
 msgstr "Точно"
@@ -150,11 +154,14 @@ msgid "Bajarilgan ishlar"
 msgstr "Выполненные работы"
 
 #: core/templates/core/base.html
-#: core/templates/core/home.html
 #: core/templates/core/registry.html
 #: core/views.py
 msgid "Bajarilgan ishlar reestri"
 msgstr "Реестр выполненных работ"
+
+#: core/templates/core/home.html
+msgid "Bajarilgan ishlarning haqiqiy hajmlarini tekshirish"
+msgstr "Проверка фактически выполненных объёмов работ"
 
 #: core/templates/core/home.html
 msgid "Bajarilgan qurilish ishlarining haqiqiy hajmlarini tekshiramiz va obyektlarning energiya samaradorligini hujjatlar, ko‘riklar hamda instrumental o‘lchovlar asosida baholab, professional xulosa taqdim etamiz."
@@ -387,10 +394,6 @@ msgstr "Энергетика и нефтегазовая отрасль"
 #: core/models.py
 msgid "Energetika va qurilish yoʻnalishiga yaqin, taniqli tashkilotlar."
 msgstr "Известные организации, близкие к сфере энергетики и строительства."
-
-#: core/templates/core/home.html
-msgid "Energiya auditi"
-msgstr "Энергетический аудит"
 
 #: core/models.py
 msgid "Energiya toifasi"
@@ -1066,6 +1069,10 @@ msgstr "Измерение на объекте"
 #: core/templates/core/home.html
 msgid "Obyektingizga qaysi talab tegishli"
 msgstr "Какое требование касается вашего объекта"
+
+#: core/templates/core/home.html
+msgid "Obyektlarning energiya samaradorligini baholash"
+msgstr "Оценка энергоэффективности объектов"
 
 #: core/templates/core/_office_map.html
 #: core/models.py

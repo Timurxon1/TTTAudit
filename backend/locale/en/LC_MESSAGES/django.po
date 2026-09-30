@@ -81,6 +81,10 @@ msgstr "Valid until"
 msgid "Amal qilish muddati"
 msgstr "Valid until"
 
+#: core/templates/core/home.html
+msgid "Amalga oshirilgan loyihalardagi tajribamiz"
+msgstr "Our experience in completed projects"
+
 #: core/models.py
 msgid "Aniq"
 msgstr "Explicit"
@@ -150,11 +154,14 @@ msgid "Bajarilgan ishlar"
 msgstr "Completed work"
 
 #: core/templates/core/base.html
-#: core/templates/core/home.html
 #: core/templates/core/registry.html
 #: core/views.py
 msgid "Bajarilgan ishlar reestri"
 msgstr "Registry of completed work"
+
+#: core/templates/core/home.html
+msgid "Bajarilgan ishlarning haqiqiy hajmlarini tekshirish"
+msgstr "Verification of actual completed work quantities"
 
 #: core/templates/core/home.html
 msgid "Bajarilgan qurilish ishlarining haqiqiy hajmlarini tekshiramiz va obyektlarning energiya samaradorligini hujjatlar, ko‘riklar hamda instrumental o‘lchovlar asosida baholab, professional xulosa taqdim etamiz."
@@ -387,10 +394,6 @@ msgstr "Energy and oil & gas"
 #: core/models.py
 msgid "Energetika va qurilish yoʻnalishiga yaqin, taniqli tashkilotlar."
 msgstr "Well-known organisations close to the energy and construction sector."
-
-#: core/templates/core/home.html
-msgid "Energiya auditi"
-msgstr "Energy audit"
 
 #: core/models.py
 msgid "Energiya toifasi"
@@ -1066,6 +1069,10 @@ msgstr "On-site measurement"
 #: core/templates/core/home.html
 msgid "Obyektingizga qaysi talab tegishli"
 msgstr "Which requirement applies to your site"
+
+#: core/templates/core/home.html
+msgid "Obyektlarning energiya samaradorligini baholash"
+msgstr "Assessment of facility energy efficiency"
 
 #: core/templates/core/_office_map.html
 #: core/models.py

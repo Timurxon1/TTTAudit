@@ -15,7 +15,7 @@
       {% for d in directions %}<article class="audit-card audit-card--{{ d.accent }}">
         <span class="audit-card__no num">0{{ forloop.counter }}</span>
         <div class="audit-card__body">
-          <p class="audit-card__type">{% if d.accent == "amber" %}{% translate "Energiya auditi" %}{% else %}{% translate "Qurilish auditi" %}{% endif %}</p>
+          <p class="audit-card__type">{% if d.accent == "amber" %}{% translate "Obyektlarning energiya samaradorligini baholash" %}{% else %}{% translate "Bajarilgan ishlarning haqiqiy hajmlarini tekshirish" %}{% endif %}</p>
           <h2>{{ d|tr:"title" }}</h2>
           <p>{{ d|tr:"summary" }}</p>
           <span class="audit-card__meta num">{% if d.accent == "amber" %}{{ energy_basis }}{% else %}{% translate "Litsenziya" %} № 518159{% endif %}</span>
@@ -123,7 +123,7 @@
 <section class="sec" id="loyihalar"><div class="wrap">
   <div class="sh">
     <p class="sh__k">{% translate "Loyihalar" %}</p>
-    <div><h2>{% translate "Bajarilgan ishlar reestri" %}</h2><p>{% blocktranslate with n=facts.projects %}Koʻp yillik professional faoliyat davomida «TTT-AUDIT» davlat tashkilotlari, yirik korxonalar va xususiy biznes uchun ko‘plab loyihalarni amalga oshirdi. Reestrda tashkilot faoliyati yoʻnalishlari boʻyicha {{ n }} ta bajarilgan ish taqdim etilgan.{% endblocktranslate %}</p></div>
+    <div><h2>{% translate "Amalga oshirilgan loyihalardagi tajribamiz" %}</h2><p>{% blocktranslate with n=facts.projects %}Koʻp yillik professional faoliyat davomida «TTT-AUDIT» davlat tashkilotlari, yirik korxonalar va xususiy biznes uchun ko‘plab loyihalarni amalga oshirdi. Reestrda tashkilot faoliyati yoʻnalishlari boʻyicha {{ n }} ta bajarilgan ish taqdim etilgan.{% endblocktranslate %}</p></div>
     <a class="more sh__aside" href="{% url 'core:registry' %}">{% translate "Toʻliq reestr" %} →</a>
   </div>
   {% include "core/_uzmap.html" %}
