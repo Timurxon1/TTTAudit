@@ -88,7 +88,7 @@ def test_new_team_portraits_are_not_zoomed_like_legacy_bulletin_photos():
     )
     assert member.photo_has_band is False
 
-    member.photo = "team/DSC08371.JPG"
+    member.photo = "team/Nuraliyev_Shukrullo_Rustamjon_ogli.JPG"
     assert member.photo_has_band is False
 
     member.photo = "team/legacy-bulletin.jpg"
