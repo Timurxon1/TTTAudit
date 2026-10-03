@@ -41,8 +41,8 @@ def test_import_loads_client_facts():
     assert Credential.objects.filter(kind="insurance").exists()
     assert Instrument.objects.count() == 5
     assert Stat.objects.count() == 4
-    assert TeamMember.objects.count() == 39                      # direktor + 38 mutaxassis
-    assert TeamMember.objects.filter(dept="energy").count() == 24
+    assert TeamMember.objects.count() == 38                      # direktor + 37 mutaxassis
+    assert TeamMember.objects.filter(dept="energy").count() == 23
     assert TeamMember.objects.exclude(photo="").count() >= 30
     assert Project.objects.count() == 143
     assert Project.objects.filter(direction__slug="olchov-auditi").count() == 95
@@ -83,17 +83,18 @@ def test_director_is_first_member_with_photo_and_engineering_history():
 @pytest.mark.django_db
 def test_certificates_attached_to_members():
     entries = json.loads((DATA / "staff_certificates.json").read_text(encoding="utf-8"))["certificates"]
-    assert StaffCertificate.objects.count() == len(entries) == 46          # skipped == 0
+    active_entries = [entry for entry in entries if "xudayberdiev" not in entry["file"]]
+    assert StaffCertificate.objects.count() == len(active_entries) == 40
     assert all(c.scan for c in StaffCertificate.objects.all())
-    xudayberdiev = TeamMember.objects.get(full_name="Xudayberdiev Otabek Talipovich")
-    assert xudayberdiev.certificates.count() == 6                           # ikki qator — bitta xodim
-    assert list(xudayberdiev.certificates.values_list("order", flat=True)) == [0, 1, 2, 3, 4, 5]
+    davronbek = TeamMember.objects.get(full_name="Botirov Davronbek Baxtiyorovich")
+    assert davronbek.is_leadership and davronbek.role_en == "Deputy General Director"
+    assert not TeamMember.objects.filter(full_name="Xudayberdiev Otabek Talipovich").exists()
 
 
 @pytest.mark.django_db
 def test_import_reports_attached_and_skipped_certificates(own_media, capsys):
     call_command("import_tttaudit", "--force")
-    assert "Sertifikatlar: 46 biriktirildi, 0 otkazib yuborildi" in capsys.readouterr().out
+    assert "Sertifikatlar: 40 biriktirildi, 6 otkazib yuborildi" in capsys.readouterr().out
 
 
 @pytest.mark.django_db
@@ -107,7 +108,7 @@ def test_garbled_name_is_fixed_and_keeps_certificate():
 @pytest.mark.django_db
 def test_member_slugs_are_unique_and_ascii():
     slugs = list(TeamMember.objects.values_list("slug", flat=True))
-    assert len(slugs) == len(set(slugs)) == 39
+    assert len(slugs) == len(set(slugs)) == 38
     assert all(slug.isascii() and slug == slug.lower() for slug in slugs)
 
 
@@ -139,6 +140,6 @@ def test_repeated_force_keeps_media_file_count_stable(own_media):
     call_command("import_tttaudit", "--force")
     second = sorted(p.relative_to(own_media) for p in own_media.rglob("*") if p.is_file())
     team = [p for p in second if p.parts[0] == "team"]
-    assert len(team) == TeamMember.objects.exclude(photo="").count() + 46 == 39 + 46
+    assert len(team) == TeamMember.objects.exclude(photo="").count() + StaffCertificate.objects.count() == 38 + 40
     assert first == second                                                   # nomlar ham oʻzgarmaydi
-    assert len([p for p in team if p.parts[1] == "certificates"]) == 46
+    assert len([p for p in team if p.parts[1] == "certificates"]) == 40

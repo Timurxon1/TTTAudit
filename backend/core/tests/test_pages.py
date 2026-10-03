@@ -183,7 +183,7 @@ def test_company_page(client):
 def test_team_page_groups_by_department(client):
     html = client.get("/uz/jamoa/").content.decode()
     assert "<h1>Jamoa</h1>" in html and "Rahbariyat</h2>" in html and "Mutaxassislar</h2>" in html
-    assert html.count('class="pm"') == 39               # direktor + 38 mutaxassis (takror birlashtirilgan)
+    assert html.count('class="pm"') == 38               # direktor + 37 mutaxassis
     assert "Jami 50 xodim: 24 energoaudit, 16 texnik nazorat." in html
     assert "Energoaudit" in html and "Qurilishda nazorat oʻlchovi" in html
     assert 'aria-current="page">Jamoa</a>' in html     # menyuda «Jamoa» faol
@@ -191,7 +191,8 @@ def test_team_page_groups_by_department(client):
     # "== 1" emas: fotosurati bor har bir xodim nomi img alt'da HAM <b> ichida
     # takrorlanadi (bitta karta ichida 2 marta) — shu sababli karta sonini
     # <b> yorlig'i orqali sanaymiz: bitta kishi = bitta karta = bitta <b>.
-    assert html.count("<b>Xudayberdiev Otabek Talipovich</b>") == 1
+    assert html.count("<b>Botirov Davronbek Baxtiyorovich</b>") == 1
+    assert "Xudayberdiev Otabek Talipovich" not in html
 
 
 @pytest.mark.django_db
@@ -226,14 +227,14 @@ def test_team_leadership_starts_with_director_and_links_profiles(client):
     leaders = _cards(html, 'id="rahbariyat"')
     assert leaders[0] == "botirov-mahammad-hoshimovich"
     assert len(leaders) == TeamMember.objects.filter(is_leadership=True).count() == 3
-    assert "6 ta sertifikat" in html                                   # Xudayberdiev kartasi
-    assert "Сертификатов: 6" in client.get("/ru/jamoa/").content.decode()
+    assert "botirov-davronbek-baxtiyorovich" in leaders
+    assert "Bosh direktor oʻrinbosari" in html
 
 
 @pytest.mark.django_db
 def test_team_specialist_tabs_filter_without_js(client):
     all_cards = _cards(client.get("/uz/jamoa/").content.decode(), 'id="mutaxassislar"')
-    assert len(all_cards) == TeamMember.objects.filter(is_leadership=False).count() == 36
+    assert len(all_cards) == TeamMember.objects.filter(is_leadership=False).count() == 35
     html = client.get("/uz/jamoa/?bolim=construction").content.decode()
     cards = _cards(html, 'id="mutaxassislar"')
     expected = TeamMember.objects.filter(is_leadership=False, dept="construction")
@@ -252,10 +253,11 @@ def test_old_team_url_redirects_permanently_in_same_language(client):
 
 @pytest.mark.django_db
 def test_profile_with_certificates_shows_titles_and_numbers(client):
-    member = TeamMember.objects.get(full_name="Xudayberdiev Otabek Talipovich")
+    member = TeamMember.objects.filter(certificates__isnull=False).distinct().first()
     html = client.get(f"/uz/jamoa/{member.slug}/").content.decode()
     assert f"<title>{member.full_name} — Jamoa — TTT Audit</title>" in html
-    assert "Sertifikatlar</h2>" in html and html.count('<article class="cert">') == 6
+    assert "Sertifikatlar</h2>" in html
+    assert html.count('<article class="cert">') == member.certificates.count()
     for cert in member.certificates.all():
         assert str(escape(cert.title)) in html and str(escape(cert.number)) in html
     assert "data-lightbox" in html and "/media/team/certificates/" in html
