@@ -130,7 +130,15 @@ def _value(obj, field):
 
 
 def _record(obj, config):
-    return {"id": obj.pk, "label": str(obj),
+    label = str(obj)
+    hint = ""
+    if isinstance(obj, SiteText):
+        from .sitetext import default_for
+
+        defaults = default_for(obj.kind, obj.key)
+        label = obj.text_uz.strip() or defaults.get("uz", "").strip() or obj.key
+        hint = obj.key
+    return {"id": obj.pk, "label": label, "hint": hint,
             "values": {field.name: _value(obj, field) for field in _fields(config)}}
 
 

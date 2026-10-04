@@ -1,7 +1,7 @@
 import pytest
 from django.contrib.auth import get_user_model
 
-from core.models import Stat
+from core.models import SiteText, Stat
 
 
 @pytest.fixture
@@ -50,3 +50,18 @@ def test_react_admin_crud_and_anonymous_denial(client, react_admin_user):
     assert Stat.objects.get(pk=pk).value == "26"
     assert client.delete(f"/admin/api/resources/stats/{pk}/").status_code == 200
     assert not Stat.objects.filter(pk=pk).exists()
+
+
+@pytest.mark.django_db
+def test_site_text_record_uses_readable_uzbek_label(client, react_admin_user):
+    row = SiteText.objects.create(kind=SiteText.KIND_WIDGET, key="lf.urgent")
+    client.force_login(react_admin_user)
+
+    payload = client.get("/admin/api/resources/texts/?q=lf.urgent").json()["records"]
+
+    assert payload == [{
+        "id": row.pk,
+        "label": "Shoshilinch",
+        "hint": "lf.urgent",
+        "values": {"text_uz": "", "text_ru": "", "text_en": ""},
+    }]
