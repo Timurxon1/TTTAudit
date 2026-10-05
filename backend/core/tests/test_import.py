@@ -32,6 +32,7 @@ def test_seed_content_creates_two_directions_and_eight_services():
 def test_import_loads_client_facts():
     site = SiteSettings.load()
     assert site.tin == "202216926"
+    assert (site.phone, site.phone_second) == ("+998 91 109 35 35", "+998 50 722 77 21")
     assert site.director_uz.startswith("Botirov")
     assert site.seo_title_uz == "Energoaudit va qurilishda nazorat oʻlchovi — TTT Audit, Fargʻona"
     assert Branch.objects.count() == 1                           # faqat bosh ofis
