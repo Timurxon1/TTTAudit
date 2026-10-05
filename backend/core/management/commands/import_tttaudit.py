@@ -7,7 +7,7 @@ Oldin `seed_content` ishga tushirilgan boʻlishi shart (yoʻnalishlar kerak).
 
 Manba fayllar:
     facts.json     kompaniya rekvizitlari, hujjatlar (skan bilan), asboblar, raqamlar
-    staff.json     39 qator (byulleten; takror birlashtirilgach 38 mutaxassis), suratlar img/staff/
+    staff.json     38 qator (byulleten; takror birlashtirilgach 37 mutaxassis), suratlar img/staff/
     staff_certificates.json  46 shaxsiy sertifikat skani (img/staff_certs/), xodimga name_ru boʻyicha
     projects.json  143 loyiha (byulleten), buyurtmachi nomi bilan
     project_locations.json  loyiha joylari (ish nomi/buyurtmachi matnidan), `order` boʻyicha

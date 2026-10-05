@@ -183,7 +183,7 @@ def test_company_page(client):
 def test_team_page_groups_by_department(client):
     html = client.get("/uz/jamoa/").content.decode()
     assert "<h1>Jamoa</h1>" in html and "Rahbariyat</h2>" in html and "Mutaxassislar</h2>" in html
-    assert html.count('class="pm"') == 38               # direktor + 37 mutaxassis
+    assert html.count('class="pm"') == 37               # direktor + 36 mutaxassis
     assert "Jami 50 xodim: 24 energoaudit, 16 texnik nazorat." not in html
     assert "Energoaudit" in html and "Qurilishda nazorat oʻlchovi" in html
     assert 'aria-current="page">Jamoa</a>' in html     # menyuda «Jamoa» faol
@@ -234,7 +234,7 @@ def test_team_leadership_starts_with_director_and_links_profiles(client):
 @pytest.mark.django_db
 def test_team_specialist_tabs_filter_without_js(client):
     all_cards = _cards(client.get("/uz/jamoa/").content.decode(), 'id="mutaxassislar"')
-    assert len(all_cards) == TeamMember.objects.filter(is_leadership=False).count() == 35
+    assert len(all_cards) == TeamMember.objects.filter(is_leadership=False).count() == 34
     html = client.get("/uz/jamoa/?bolim=construction").content.decode()
     cards = _cards(html, 'id="mutaxassislar"')
     expected = TeamMember.objects.filter(is_leadership=False, dept="construction")

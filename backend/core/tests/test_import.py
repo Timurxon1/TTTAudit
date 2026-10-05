@@ -41,8 +41,8 @@ def test_import_loads_client_facts():
     assert Credential.objects.filter(kind="insurance").exists()
     assert Instrument.objects.count() == 5
     assert Stat.objects.count() == 4
-    assert TeamMember.objects.count() == 38                      # direktor + 37 mutaxassis
-    assert TeamMember.objects.filter(dept="energy").count() == 23
+    assert TeamMember.objects.count() == 37                      # direktor + 36 mutaxassis
+    assert TeamMember.objects.filter(dept="energy").count() == 22
     assert TeamMember.objects.exclude(photo="").count() >= 30
     assert Project.objects.count() == 143
     assert Project.objects.filter(direction__slug="olchov-auditi").count() == 95
@@ -108,7 +108,7 @@ def test_garbled_name_is_fixed_and_keeps_certificate():
 @pytest.mark.django_db
 def test_member_slugs_are_unique_and_ascii():
     slugs = list(TeamMember.objects.values_list("slug", flat=True))
-    assert len(slugs) == len(set(slugs)) == 38
+    assert len(slugs) == len(set(slugs)) == 37
     assert all(slug.isascii() and slug == slug.lower() for slug in slugs)
 
 
@@ -140,6 +140,6 @@ def test_repeated_force_keeps_media_file_count_stable(own_media):
     call_command("import_tttaudit", "--force")
     second = sorted(p.relative_to(own_media) for p in own_media.rglob("*") if p.is_file())
     team = [p for p in second if p.parts[0] == "team"]
-    assert len(team) == TeamMember.objects.exclude(photo="").count() + StaffCertificate.objects.count() == 38 + 40
+    assert len(team) == TeamMember.objects.exclude(photo="").count() + StaffCertificate.objects.count() == 37 + 40
     assert first == second                                                   # nomlar ham oʻzgarmaydi
     assert len([p for p in team if p.parts[1] == "certificates"]) == 40
