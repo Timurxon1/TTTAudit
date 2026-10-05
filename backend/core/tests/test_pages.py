@@ -184,7 +184,7 @@ def test_team_page_groups_by_department(client):
     html = client.get("/uz/jamoa/").content.decode()
     assert "<h1>Jamoa</h1>" in html and "Rahbariyat</h2>" in html and "Mutaxassislar</h2>" in html
     assert html.count('class="pm"') == 38               # direktor + 37 mutaxassis
-    assert "Jami 50 xodim: 24 energoaudit, 16 texnik nazorat." in html
+    assert "Jami 50 xodim: 24 energoaudit, 16 texnik nazorat." not in html
     assert "Energoaudit" in html and "Qurilishda nazorat oʻlchovi" in html
     assert 'aria-current="page">Jamoa</a>' in html     # menyuda «Jamoa» faol
     assert "core/img/director.jpg" not in html and 'data-person="director"' not in html
