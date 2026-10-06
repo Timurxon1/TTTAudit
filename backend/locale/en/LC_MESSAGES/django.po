@@ -668,10 +668,6 @@ msgstr "Insulated heating pipes with a pressure gauge"
 msgid "Jami %(n)s xodim: %(e)s energoaudit, %(c)s texnik nazorat."
 msgstr "%(n)s staff in total: %(e)s in energy audit, %(c)s in technical supervision."
 
-#: core/templates/core/team.html
-msgid "Jami %(n)s xodim: %(e)s energoaudit, %(c)s texnik nazorat. Quyida axborot byulletenida keltirilgan rahbariyat va mutaxassislar."
-msgstr "%(n)s employees in total: %(e)s in energy audit, %(c)s in technical supervision. Below are the management and specialists listed in the information bulletin."
-
 #: core/templates/core/registry.html
 msgid "Jami %(total)s ta ish. Manba: tashkilotning 2026-yilgi axborot byulletenlari; buyurtmachi nomlari byulletendagidek."
 msgstr "Projects in the registry: %(total)s. Source: the organisation's 2026 information bulletins; client names as listed in the bulletin."
@@ -1598,6 +1594,10 @@ msgstr "Answer three questions — find out which requirement applies to your fa
 #: core/templates/core/home.html
 msgid "Uch savolga javob bering. Natija faqat qonunda aniq yozilgan talablarga tayanadi."
 msgstr "Answer three questions. The result relies only on requirements set out explicitly in law."
+
+#: core/models.py
+msgid "Uchinchi telefon"
+msgstr "Third phone"
 
 #: core/models.py
 msgid "Urgʻu bilan"

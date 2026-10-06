@@ -69,6 +69,7 @@ class SiteSettings(TranslatableMixin, models.Model):
     )
     phone = models.CharField(_("Telefon"), max_length=40, default="+998 00 000 00 00")
     phone_second = models.CharField(_("Qoʻshimcha telefon"), max_length=40, blank=True)
+    phone_third = models.CharField(_("Uchinchi telefon"), max_length=40, blank=True)
     email = models.EmailField(_("E-pochta"), default="info@example.uz")
     telegram = models.CharField(max_length=80, blank=True)
     address_uz = models.CharField(max_length=200, default="Toshkent sh.")

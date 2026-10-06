@@ -273,6 +273,7 @@ class Command(BaseCommand):
             "staff_supervision": company["staff_supervision"],
             "phone": company["phone"],
             "phone_second": company["phone_second"],
+            "phone_third": company["phone_third"],
             "email": company["email"],
             "director_uz": company["director"],
             "director_ru": company["director_ru"],

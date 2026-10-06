@@ -668,10 +668,6 @@ msgstr "Изолированные трубы отопления с маноме
 msgid "Jami %(n)s xodim: %(e)s energoaudit, %(c)s texnik nazorat."
 msgstr "Всего сотрудников: %(n)s; энергоаудит — %(e)s, технический надзор — %(c)s."
 
-#: core/templates/core/team.html
-msgid "Jami %(n)s xodim: %(e)s energoaudit, %(c)s texnik nazorat. Quyida axborot byulletenida keltirilgan rahbariyat va mutaxassislar."
-msgstr "Всего %(n)s сотрудников: %(e)s в энергоаудите, %(c)s в техническом надзоре. Ниже — руководство и специалисты из информационного бюллетеня."
-
 #: core/templates/core/registry.html
 msgid "Jami %(total)s ta ish. Manba: tashkilotning 2026-yilgi axborot byulletenlari; buyurtmachi nomlari byulletendagidek."
 msgstr "Работ в реестре: %(total)s. Источник: информационные бюллетени организации за 2026 год; названия заказчиков — как в бюллетене."
@@ -1598,6 +1594,10 @@ msgstr "Ответьте на три вопроса — узнаете, како
 #: core/templates/core/home.html
 msgid "Uch savolga javob bering. Natija faqat qonunda aniq yozilgan talablarga tayanadi."
 msgstr "Ответьте на три вопроса. Результат опирается только на требования, прямо установленные законом."
+
+#: core/models.py
+msgid "Uchinchi telefon"
+msgstr "Третий телефон"
 
 #: core/models.py
 msgid "Urgʻu bilan"

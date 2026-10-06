@@ -201,7 +201,7 @@
   <div class="off">
     <dl class="addr">
       <dt>{% translate "Manzil" %}</dt><dd>{{ site|tr:"address" }}</dd>
-      <dt>{% translate "Telefon" %}</dt><dd><a class="num" href="tel:{{ site.phone|cut:' ' }}">{{ site.phone }}</a>{% if site.phone_second %}<br><a class="num" href="tel:{{ site.phone_second|cut:' ' }}">{{ site.phone_second }}</a>{% endif %}</dd>
+      <dt>{% translate "Telefon" %}</dt><dd><a class="num" href="tel:{{ site.phone|cut:' ' }}">{{ site.phone }}</a>{% if site.phone_second %}<br><a class="num" href="tel:{{ site.phone_second|cut:' ' }}">{{ site.phone_second }}</a>{% endif %}{% if site.phone_third %}<br><a class="num" href="tel:{{ site.phone_third|cut:' ' }}">{{ site.phone_third }}</a>{% endif %}</dd>
       <dt>{% translate "E-pochta" %}</dt><dd><a href="mailto:{{ site.email }}">{{ site.email }}</a></dd>
       {% if site|tr:"director" %}<dt>{% translate "Rahbar" %}</dt><dd>{{ site|tr:"director" }}</dd>{% endif %}
       <dt>{% translate "STIR" %}</dt><dd class="num">{{ site.tin }}</dd>

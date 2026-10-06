@@ -23,7 +23,7 @@
 {% if site.favicon %}<link rel="icon" type="image/png" href="{{ site.favicon.url }}">
 <link rel="apple-touch-icon" href="{{ site.favicon.url }}">{% else %}<link rel="icon" type="image/png" href="{% static 'core/img/brand-mark.png' %}">
 <link rel="apple-touch-icon" href="{% static 'core/img/brand-mark.png' %}">{% endif %}
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"TTT Audit","legalName":"{{ site|tr:"org_name"|escapejs }}","url":"{{ SITE_URL }}/","logo":"{{ SITE_URL }}{% if site.logo_mark %}{{ site.logo_mark.url }}{% else %}{% static 'core/img/brand-logo.png' %}{% endif %}","telephone":["{{ site.phone|escapejs }}"{% if site.phone_second %},"{{ site.phone_second|escapejs }}"{% endif %}],"email":"{{ site.email|escapejs }}","taxID":"{{ site.tin|escapejs }}","foundingDate":"{{ site.founded_year }}","address":{"@type":"PostalAddress","streetAddress":"{{ site|tr:"address"|escapejs }}","addressLocality":"Fargʻona","addressCountry":"UZ"}{% if site.map_lat %},"geo":{"@type":"GeoCoordinates","latitude":{{ site.map_lat|stringformat:".5f" }},"longitude":{{ site.map_lng|stringformat:".5f" }}}{% endif %},"areaServed":{"@type":"Country","name":"Uzbekistan"},"knowsLanguage":["uz","ru","en"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"TTT Audit","legalName":"{{ site|tr:"org_name"|escapejs }}","url":"{{ SITE_URL }}/","logo":"{{ SITE_URL }}{% if site.logo_mark %}{{ site.logo_mark.url }}{% else %}{% static 'core/img/brand-logo.png' %}{% endif %}","telephone":["{{ site.phone|escapejs }}"{% if site.phone_second %},"{{ site.phone_second|escapejs }}"{% endif %}{% if site.phone_third %},"{{ site.phone_third|escapejs }}"{% endif %}],"email":"{{ site.email|escapejs }}","taxID":"{{ site.tin|escapejs }}","foundingDate":"{{ site.founded_year }}","address":{"@type":"PostalAddress","streetAddress":"{{ site|tr:"address"|escapejs }}","addressLocality":"Fargʻona","addressCountry":"UZ"}{% if site.map_lat %},"geo":{"@type":"GeoCoordinates","latitude":{{ site.map_lat|stringformat:".5f" }},"longitude":{{ site.map_lng|stringformat:".5f" }}}{% endif %},"areaServed":{"@type":"Country","name":"Uzbekistan"},"knowsLanguage":["uz","ru","en"]}</script>
 {% block head %}{% endblock %}
 </head>
 <body data-design="2">
@@ -83,6 +83,7 @@
     <div><h4>{% translate "Aloqa" %}</h4><ul>
       <li><a class="num" href="tel:{{ site.phone|cut:' ' }}">{{ site.phone }}</a></li>
       {% if site.phone_second %}<li><a class="num" href="tel:{{ site.phone_second|cut:' ' }}">{{ site.phone_second }}</a></li>{% endif %}
+      {% if site.phone_third %}<li><a class="num" href="tel:{{ site.phone_third|cut:' ' }}">{{ site.phone_third }}</a></li>{% endif %}
       <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
       <li><a href="{% url 'core:request' %}">{% translate "Murojaat yuborish" %}</a></li>
     </ul></div>

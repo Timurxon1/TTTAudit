@@ -27,7 +27,7 @@ class SiteSettingsAdmin(admin.ModelAdmin):
     fieldsets = [
         ("Rekvizitlar", {"fields": [
             "brand_name", "brand_descriptor", "org_name_uz", "org_name_ru", "org_name_en",
-            "tin", "founded_year", "phone", "phone_second", "email", "telegram",
+            "tin", "founded_year", "phone", "phone_second", "phone_third", "email", "telegram",
             "address_uz", "address_ru", "address_en",
             "work_hours_uz", "work_hours_ru", "work_hours_en",
             "bank_details_uz", "bank_details_ru", "bank_details_en", "map_embed",

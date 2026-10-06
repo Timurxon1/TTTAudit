@@ -9,7 +9,7 @@
 <div class="split">
   <div class="panel panel--form">{% include "core/_lead.html" %}</div>
   <aside class="aside">
-    <div class="aside__box"><h2>{% translate "Telefon" %}</h2><ul><li><a class="num" href="tel:{{ site.phone|cut:' ' }}">{{ site.phone }}</a></li>{% if site.phone_second %}<li><a class="num" href="tel:{{ site.phone_second|cut:' ' }}">{{ site.phone_second }}</a></li>{% endif %}</ul></div>
+    <div class="aside__box"><h2>{% translate "Telefon" %}</h2><ul><li><a class="num" href="tel:{{ site.phone|cut:' ' }}">{{ site.phone }}</a></li>{% if site.phone_second %}<li><a class="num" href="tel:{{ site.phone_second|cut:' ' }}">{{ site.phone_second }}</a></li>{% endif %}{% if site.phone_third %}<li><a class="num" href="tel:{{ site.phone_third|cut:' ' }}">{{ site.phone_third }}</a></li>{% endif %}</ul></div>
     <div class="aside__box"><h2>{% translate "E-pochta" %}</h2><ul><li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li></ul></div>
     <div class="basis"><h2>{% translate "Vakolat" %}</h2><ul>{% for c in hero_credentials %}<li><b>{{ c.number }}</b>{{ c.get_kind_display }}</li>{% endfor %}</ul></div>
   </aside>
