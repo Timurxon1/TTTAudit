@@ -226,15 +226,16 @@ def test_team_leadership_starts_with_director_and_links_profiles(client):
     html = client.get("/uz/jamoa/").content.decode()
     leaders = _cards(html, 'id="rahbariyat"')
     assert leaders[0] == "botirov-mahammad-hoshimovich"
-    assert len(leaders) == TeamMember.objects.filter(is_leadership=True).count() == 3
-    assert "botirov-davronbek-baxtiyorovich" in leaders
-    assert "Bosh direktor oʻrinbosari" in html
+    assert len(leaders) == TeamMember.objects.filter(is_leadership=True).count() == 2
+    assert "botirov-davronbek-baxtiyorovich" not in leaders
+    assert "Bosh direktor oʻrinbosari" not in html
+    assert "Sanoat issiqlik energetikasi va energiya auditi bo‘yicha mutaxassis" in html
 
 
 @pytest.mark.django_db
 def test_team_specialist_tabs_filter_without_js(client):
     all_cards = _cards(client.get("/uz/jamoa/").content.decode(), 'id="mutaxassislar"')
-    assert len(all_cards) == TeamMember.objects.filter(is_leadership=False).count() == 34
+    assert len(all_cards) == TeamMember.objects.filter(is_leadership=False).count() == 35
     html = client.get("/uz/jamoa/?bolim=construction").content.decode()
     cards = _cards(html, 'id="mutaxassislar"')
     expected = TeamMember.objects.filter(is_leadership=False, dept="construction")
@@ -253,7 +254,7 @@ def test_old_team_url_redirects_permanently_in_same_language(client):
 
 @pytest.mark.django_db
 def test_profile_with_certificates_shows_titles_and_numbers(client):
-    member = TeamMember.objects.filter(certificates__isnull=False).distinct().first()
+    member = TeamMember.objects.filter(certificates__issued_on__isnull=False).distinct().first()
     html = client.get(f"/uz/jamoa/{member.slug}/").content.decode()
     assert f"<title>{member.full_name} — Jamoa — TTT Audit</title>" in html
     assert "Sertifikatlar</h2>" in html
@@ -287,7 +288,7 @@ def test_director_profile_shows_education_and_experience(client):
 def test_profile_headings_translated(client):
     ru = client.get("/ru/jamoa/botirov-mahammad-hoshimovich/").content.decode()
     assert "Образование</h2>" in ru and "Опыт работы</h2>" in ru and "Ботиров Махаммад Хошимович" in ru
-    member = TeamMember.objects.filter(certificates__isnull=False).distinct().first()
+    member = TeamMember.objects.filter(certificates__issued_on__isnull=False).distinct().first()
     en = client.get(f"/en/jamoa/{member.slug}/").content.decode()
     assert "Certificates</h2>" in en and "Issued:" in en and "— Team — TTT Audit</title>" in en
 

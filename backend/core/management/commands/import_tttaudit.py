@@ -377,18 +377,14 @@ class Command(BaseCommand):
             seen_names.add(key)
             role_ru = (row.get("role_ru") or "").lower()
             name_ru, name_latin = STAFF_NAME_FIXES.get(key, (row["name_ru"], ""))
-            is_davronbek = latin_name == "Botirov Davronbek Baxtiyorovich"
-            role_uz = "Bosh direktor oʻrinbosari" if is_davronbek else row["role_uz"]
-            role_ru = "Заместитель Генерального директора" if is_davronbek else row["role_ru"]
-            role_en = "Deputy General Director" if is_davronbek else row["role_en"]
             obj = TeamMember(
                 full_name=name_latin or row["name_uz"] or STAFF_LATIN_NAMES.get(key) or row["name_ru"],
                 full_name_ru=name_ru,
-                role_uz=role_uz, role_ru=role_ru, role_en=role_en,
+                role_uz=row["role_uz"], role_ru=row["role_ru"], role_en=row["role_en"],
                 certificates_uz=row.get("cert_uz", ""), certificates_ru=row.get("cert_ru", ""),
                 certificates_en=row.get("cert_en", ""), dept=row["dept"],
-                is_leadership=is_davronbek or any(word in role_ru.lower() for word in LEADERSHIP_WORDS),
-                order=2 if is_davronbek else order,
+                is_leadership=any(word in role_ru.lower() for word in LEADERSHIP_WORDS),
+                order=order,
             )
             if row.get("photo"):
                 attach(obj.photo, row["photo"])

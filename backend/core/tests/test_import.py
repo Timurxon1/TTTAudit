@@ -88,7 +88,9 @@ def test_certificates_attached_to_members():
     assert StaffCertificate.objects.count() == len(active_entries) == 40
     assert all(c.scan for c in StaffCertificate.objects.all())
     davronbek = TeamMember.objects.get(full_name="Botirov Davronbek Baxtiyorovich")
-    assert davronbek.is_leadership and davronbek.role_en == "Deputy General Director"
+    assert not davronbek.is_leadership
+    assert davronbek.role_uz == "Sanoat issiqlik energetikasi va energiya auditi bo‘yicha mutaxassis"
+    assert davronbek.role_en == "Industrial heat power and energy audit specialist"
     assert not TeamMember.objects.filter(full_name="Xudayberdiev Otabek Talipovich").exists()
 
 
